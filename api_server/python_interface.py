@@ -5,7 +5,7 @@ import traceback
 import io
 import matplotlib
 import base64
-matplotlib.use('Agg')  # 使用非交互式后端
+matplotlib.use('Agg')  # Use non-interactive backend
 import matplotlib.pyplot as plt
 from contextlib import redirect_stdout
 import warnings
@@ -14,49 +14,49 @@ def execute_python_code(code: str, output_directory="images") -> dict:
     redirected_output = io.StringIO()
     images = []
 
-    # 准备一个字典来作为执行环境的全局变量
+    # Prepare a dictionary to serve as global variables for execution environment
     exec_globals = {
         "__builtins__": __builtins__,
         "__name__": "__main__",
     }
 
     try:
-        # 重定向标准输出，捕获 print() 等输出
+        # Redirect standard output, capture print() and other outputs
         with redirect_stdout(redirected_output):
-            # 抑制 UserWarning 警告
+            # Suppress UserWarning warnings
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore", category=UserWarning)
 
-                # 重定义 plt.show()，使其不执行任何操作
+                # Redefine plt.show() to make it do nothing
                 plt.show = lambda: None
 
-                # 执行代码
+                # Execute code
                 exec(code, exec_globals)
 
-        # 获取所有生成的图形
+        # Get all generated figures
         figs = [plt.figure(num) for num in plt.get_fignums()]
         for fig in figs:
             buf = io.BytesIO()
             fig.savefig(buf, format='png')
             buf.seek(0)
-            # 将图片编码为 base64
+            # Encode image as base64
             img_base64 = base64.b64encode(buf.read()).decode('utf-8')
             images.append(img_base64)
             buf.close()
-            plt.close(fig)  # 关闭图形，释放内存
+            plt.close(fig)  # Close figure, release memory
 
     except Exception as e:
-        # 捕获并返回异常的类型和消息
+        # Capture and return exception type and message
         error = f"{type(e).__name__}: {e}"
         stdout = redirected_output.getvalue()
         redirected_output.close()
         ans = {'stdout': stdout, 'error': error, 'images': images}
-        return ans  # 返回包含错误信息的字典
+        return ans  # Return dictionary containing error information
     else:
         stdout = redirected_output.getvalue()
         redirected_output.close()
         ans = {'stdout': stdout, 'error': None, 'images': images}
-        return ans  # 返回正常的执行结果
+        return ans  # Return normal execution result
 
 if __name__ == '__main__':
     code = "print(123)"

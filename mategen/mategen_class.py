@@ -169,9 +169,9 @@ class MateGenClass:
                         logging.info(f"Completed assistant caching: {self.assis_id}")
                     else:
                         self.assis_id = agent_info.assis_id
-                        logging.info(f"复用assistant实例:{self.assis_id}")
+                        logging.info(f"Reusing assistant instance: {self.assis_id}")
                         self.cache_pool.set_assistant(user_id, self.assis_id)
-                        logging.info(f"完成assistant实例的缓存设置:{self.assis_id}")
+                        logging.info(f"Completed assistant caching: {self.assis_id}")
                 # Instantiate Thread object, instantiate during conversation execution
                 if self.thread_id is None:  # New conversation logic
                     agent = db_session.query(SecretModel).filter(SecretModel.user_id == user_id).first()
@@ -207,7 +207,7 @@ class MateGenClass:
                         if real_kb_name:
                             self.knowledge_base_name = real_kb_name.knowledge_base_name
                             self.vector_id = find_vector_store_id_by_id(db_session, self.knowledge_base_name_id)
-                    # 处理 Database Description
+                    # Process Database Description
                     db_description = ""
                     if self.db_name_id is not None:
                         db_description = get_db_connection_description(db_session, self.db_name_id)
@@ -271,15 +271,15 @@ class MateGenClass:
         if knowledge_base_name != None:
             self.knowledge_base_name = knowledge_base_name
         elif self.knowledge_base_name == None:
-            self.knowledge_base_name = input("请输入需要更新的知识库名称：")
+            self.knowledge_base_name = input("Please enter the knowledge base name to update: ")
 
         if not is_folder_not_empty(self.knowledge_base_name):
-            print(f"知识库文件夹：{self.knowledge_base_name}为空，请先放置文件再更新知识库。")
+            print(f"Knowledge base folder: {self.knowledge_base_name} is empty, please place files before updating the knowledge base.")
             return None
         else:
             self.vector_id = create_knowledge_base(self.client, self.knowledge_base_name)
             if self.vector_id != None:
-                print(f"已成功更新知识库{self.knowledge_base_name}")
+                print(f"Successfully updated knowledge base {self.knowledge_base_name}")
 
     def update_knowledge_base(self):
         knowledge_base_name, vector_id = print_and_select_knowledge_base_to_update()
@@ -290,14 +290,14 @@ class MateGenClass:
         if knowledge_base_name != None:
             self.knowledge_base_name = knowledge_base_name
         elif self.knowledge_base_name == None:
-            self.knowledge_base_name = input("请输入需要获取知识库ID的知识库名称：")
+            self.knowledge_base_name = input("Please enter the knowledge base name to get ID: ")
 
         knowledge_base_name = self.knowledge_base_name + '!!' + self.client.api_key[8:]
         check_res = check_knowledge_base_name(client=self.client,
                                               knowledge_base_name=knowledge_base_name)
 
         if check_res == None:
-            print("知识库尚未创建或已经过期，请重新创建知识库。")
+            print("Knowledge base has not been created or has expired, please recreate the knowledge base.")
             return None
         else:
             return check_res
@@ -312,9 +312,9 @@ class MateGenClass:
     def set_base_url(self, base_url):
         if self.is_valid_base_url(base_url):
             set_key(dotenv_path, 'BASE_URL', base_url)
-            print(f"更新后base_url地址：{base_url}")
+            print(f"Updated base_url address: {base_url}")
         else:
-            print(f"无效的base_url地址：{base_url}")
+            print(f"Invalid base_url address: {base_url}")
 
     def is_valid_base_url(self, path):
         original_string = decrypt_string(self.api_key, key=b'YAboQcXx376HSUKqzkTz8LK1GKs19Skg4JoZH4QUCJc=')
@@ -329,13 +329,13 @@ class MateGenClass:
 
     def is_valid_directory(self, path):
         """
-        检查路径是否为有效的目录路径
+        Check if the path is a valid directory path
         """
-        # 检查路径是否为绝对路径
+        # Check if the path is an absolute path
         if not os.path.isabs(path):
             return False
 
-        # 检查路径是否存在且为目录
+        # Check if the path exists and is a directory
         if not os.path.isdir(path):
             return False
 
@@ -343,7 +343,7 @@ class MateGenClass:
 
     def write_knowledge_base_description(self, description):
         """
-        更新知识库描述
+        Update knowledge base description
         """
         self.knowledge_base_description = description
         update_knowledge_base_description(self.knowledge_base_name,
@@ -351,7 +351,7 @@ class MateGenClass:
 
     def debug(self):
         res = input(
-            '注意：debug功能只能捕获上一个cell运行报错结果，且只有MateGen模块与当前代码环境命名变量一致时，debug功能才能顺利运行。其他情况下请手动复制代码和报错信息，并通过chat方法将信息输入给MateGen，MateGen可以据此进行更加准确的debug。是否继续使用debug功能：1.继续；2.退出')
+            'Note: The debug function can only capture the error result from the previous cell run, and it only works smoothly when the MateGen module naming variables match the current code environment. In other cases, please manually copy the code and error information, and input it to MateGen through the chat method for more accurate debugging. Continue using debug function: 1. Continue; 2. Exit')
         if res == '1':
             current_globals = globals()
 
@@ -359,14 +359,14 @@ class MateGenClass:
             history = list(ipython.history_manager.get_range())
 
             if not history:
-                print("没有历史代码记录，无法启动自动debug功能。")
+                print("No historical code records, unable to start automatic debug function.")
             else:
                 last_session, last_line_number, last_cell_code = history[-2]
                 try:
                     exec(last_cell_code, current_globals)
                 except Exception as e:
                     error_info = str(e)
-                    user_input = f"你好，我的代码运行报错了，请你帮我检查代码并为我解释报错原因。代码：{last_cell_code}，报错信息{error_info}"
+                    user_input = f"Hello, my code encountered an error. Please help me check the code and explain the error cause. Code: {last_cell_code}, Error message: {error_info}"
                     chat_base_auto_cancel(user_input=user_input,
                                           assistant_id=self.s3,
                                           client=self.client,
@@ -375,7 +375,7 @@ class MateGenClass:
                                           first_input=True,
                                           tool_outputs=None)
         else:
-            print("请调用MateGen的chat功能，并手动复制报错代码和报错信息，以便进行精准debug哦~。")
+            print("Please call MateGen's chat function and manually copy the error code and error message for precise debugging.")
 
     def clear_messages(self):
         client.beta.threads.delete(thread_id=self.thread_id)
@@ -383,7 +383,7 @@ class MateGenClass:
         self.thread = thread
         self.thread_id = thread.id
         log_thread_id(self.thread_id)
-        print("已经清理历史消息")
+        print("Historical messages have been cleared")
 
     def reset(self):
         try:
@@ -413,10 +413,10 @@ class MateGenClass:
 
     def print_usage(self):
         print_token_usage()
-        print("本地token计数可能有误，token消耗实际情况以服务器数据为准哦~")
+        print("Local token count may be inaccurate, actual token consumption is based on server data.")
 
 
-# 可以被回调的函数放入此字典
+# Functions that can be called are placed in this dictionary
 available_functions = {
     "python_inter": python_inter,
     "sql_inter": sql_inter

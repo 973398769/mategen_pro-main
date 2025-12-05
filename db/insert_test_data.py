@@ -7,15 +7,15 @@ Date: 2024/11/29$
 
 
 if __name__ == '__main__':
-    # 开发环境
+    # Development environment
     #
     from config.config import SQLALCHEMY_DATABASE_URI, username, password, hostname, database_name
 
     engine = create_engine(SQLALCHEMY_DATABASE_URI, echo=True)
 
-    # # 删除所有表
+    # # Delete all tables
     Base.metadata.drop_all(engine)
-    # # # # # 初始化操作
+    # # # # # Initialization operation
     # initialize_database(username=username,
     #                     password=password,
     #                     hostname=hostname,
@@ -27,9 +27,9 @@ if __name__ == '__main__':
     # engine = create_engine(SQLALCHEMY_DATABASE_URI, echo=True)
     # import pandas as pd
     #
-    # # 使用连接来执行命令
-    # # SQL 创建表语句
-    # # 使用 text 包装 SQL 创建表语句
+    # # Use connection to execute commands
+    # # SQL create table statement
+    # # Use text to wrap SQL create table statement
     # create_table_statement = text("""
     # CREATE TABLE IF NOT EXISTS user_demographics (
     #     customerID VARCHAR(255) PRIMARY KEY,
@@ -40,17 +40,17 @@ if __name__ == '__main__':
     # )
     # """)
     #
-    # # 使用连接来执行创建表命令
+    # # Use connection to execute create table command
     # with engine.connect() as conn:
-    #     conn.execute(create_table_statement)  # 创建表
+    #     conn.execute(create_table_statement)  # Create table
     #
     #
-    # # 读取 CSV 文件
+    # # Read CSV file
     # df = pd.read_csv('../user_demographics.csv')
     #
     # df.to_sql('user_demographics', con=engine, index=False, if_exists='append', chunksize=500)
     #
-    # # 创建 user_services 表的 SQL 语句
+    # # Create user_services table SQL statement
     # create_table_user_services = text("""
     # CREATE TABLE IF NOT EXISTS user_services (
     #     customerID VARCHAR(255) PRIMARY KEY,
@@ -66,16 +66,16 @@ if __name__ == '__main__':
     # )
     # """)
     #
-    # # 使用连接来执行创建表命令
+    # # Use connection to execute create table command
     # with engine.connect() as conn:
-    #     conn.execute(create_table_user_services)  # 创建表
+    #     conn.execute(create_table_user_services)  # Create table
     #
-    # df_services = pd.read_csv('../user_services.csv')  # 确保文件路径正确
+    # df_services = pd.read_csv('../user_services.csv')  # Ensure file path is correct
     #
-    # # 将数据导入到数据库中
+    # # Import data into database
     # df_services.to_sql('user_services', con=engine, index=False, if_exists='append', chunksize=500)
     #
-    # # 创建 user_payments 表的 SQL 语句
+    # # Create user_payments table SQL statement
     # create_table_user_payments = text("""
     # CREATE TABLE IF NOT EXISTS user_payments (
     #     customerID VARCHAR(255) PRIMARY KEY,
@@ -87,17 +87,17 @@ if __name__ == '__main__':
     # )
     # """)
     #
-    # # 使用连接来执行创建表命令
+    # # Use connection to execute create table command
     # with engine.connect() as conn:
-    #     conn.execute(create_table_user_payments)  # 创建表
+    #     conn.execute(create_table_user_payments)  # Create table
     #
-    # # 读取 CSV 文件
-    # df_payments = pd.read_csv('../user_payments.csv')  # 确保文件路径正确
+    # # Read CSV file
+    # df_payments = pd.read_csv('../user_payments.csv')  # Ensure file path is correct
     #
-    # # 将数据导入到数据库中
+    # # Import data into database
     # df_payments.to_sql('user_payments', con=engine, index=False, if_exists='append', chunksize=500)
     #
-    # # 创建 user_churn 表的 SQL 语句
+    # # Create user_churn table SQL statement
     # create_table_user_churn = text("""
     # CREATE TABLE IF NOT EXISTS user_churn (
     #     customerID VARCHAR(255) PRIMARY KEY,
@@ -105,12 +105,12 @@ if __name__ == '__main__':
     # )
     # """)
     #
-    # # 使用连接来执行创建表命令
+    # # Use connection to execute create table command
     # with engine.connect() as conn:
-    #     conn.execute(create_table_user_churn)  # 创建表
+    #     conn.execute(create_table_user_churn)  # Create table
     #
-    # # 读取 CSV 文件
-    # df_payments = pd.read_csv('../user_churn.csv')  # 确保文件路径正确
+    # # Read CSV file
+    # df_payments = pd.read_csv('../user_churn.csv')  # Ensure file path is correct
     #
-    # # 将数据导入到数据库中
+    # # Import data into database
     # df_payments.to_sql('user_churn', con=engine, index=False, if_exists='append', chunksize=500)

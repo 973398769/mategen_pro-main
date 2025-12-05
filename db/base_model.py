@@ -7,26 +7,26 @@ from db.base import Base
 
 class SecretModel(Base):
     """
-    该表存储代理信息，包括代理的 ID、API 密钥、用户 ID 等字段。
+    This table stores agent information, including agent ID, API key, user ID, and other fields.
     """
     __tablename__ = 'agents'
-    id = Column(Integer, primary_key=True, autoincrement=True)  # 自增 ID
-    assis_id = Column(String(255), unique=True, nullable=False)  # 存储assistant对象ID
-    api_key = Column(String(768), unique=True, nullable=False)  # 限制 api_key 必须唯一
-    user_id = Column(String(255), unique=True, nullable=False)  # 新增用户 ID 字段
+    id = Column(Integer, primary_key=True, autoincrement=True)  # Auto-increment ID
+    assis_id = Column(String(255), unique=True, nullable=False)  # Store assistant object ID
+    api_key = Column(String(768), unique=True, nullable=False)  # Restrict api_key to be unique
+    user_id = Column(String(255), unique=True, nullable=False)  # Added user ID field
 
-    initialized = Column(Boolean, default=False)  # 默认值为 false，判断是否执行过初始化
-    agent_type = Column(String(255), default="normal")  # 默认值为 "normal"
+    initialized = Column(Boolean, default=False)  # Default value is false, determine if initialization has been performed
+    agent_type = Column(String(255), default="normal")  # Default value is "normal"
 
-    created_at = Column(DateTime(timezone=True), server_default=func.now())  # 自动生成创建时间
-    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())  # 消息更新时间
+    created_at = Column(DateTime(timezone=True), server_default=func.now())  # Automatically generate creation time
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())  # Message update time
 
     threads = relationship("ThreadModel", back_populates="agent", cascade="all, delete-orphan")
 
 
 class ThreadModel(Base):
     """
-    该表存储会话线程的信息，每个线程关联一个代理，并可能包含多个消息和知识库。
+    This table stores conversation thread information, each thread is associated with an agent and may contain multiple messages and knowledge bases.
     """
     __tablename__ = 'threads'
     id = Column(String(255), primary_key=True)
@@ -34,67 +34,67 @@ class ThreadModel(Base):
     conversation_name = Column(String(255))
     run_mode = Column(String(255))
     created_at = Column(DateTime(timezone=True), server_default=func.now())
-    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())  # 消息更新时间
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())  # Message update time
 
-    # 反向关系到 MessageModel
+    # Reverse relationship to MessageModel
     messages = relationship("MessageModel", back_populates="thread", order_by="MessageModel.created_at")
 
-    # 其他的关系定义
+    # Other relationship definitions
     knowledge_bases = relationship("KnowledgeBase", back_populates="thread")
     agent = relationship("SecretModel", back_populates="threads")
 
 
 class KnowledgeBase(Base):
     """
-    该表存储知识库的信息，包括知识库名称、分块策略、描述等。
+    This table stores knowledge base information, including knowledge base name, chunking strategy, description, etc.
     """
     __tablename__ = 'knowledge_bases'
 
     id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
-    # 主键字段
+    # Primary key field
     vector_store_id = Column(String(255), nullable=True)
-    # 添加关于文本分块的策略
+    # Add strategy for text chunking
     chunking_strategy = Column(String(255), default="auto")
     max_chunk_size_tokens = Column(Integer, default=800)
     chunk_overlap_tokens = Column(Integer, default=400)
 
-    # 知识库的名称
+    # Knowledge base name
     knowledge_base_name = Column(String(255), nullable=False)
 
-    # 新增字段：记录创建时间
+    # New field: record creation time
     created_at = Column(DateTime, default=func.now())
-    # 显示的知识库名称
+    # Display knowledge base name
     display_knowledge_base_name = Column(String(255), nullable=False)
-    # 知识库描述
+    # Knowledge base description
     knowledge_base_description = Column(Text, nullable=True)
-    # 外键字段，链接到 threads 表的 id 字段
+    # Foreign key field, linked to the id field in threads table
     thread_id = Column(String(255), ForeignKey('threads.id'))
-    # 建立与 ThreadModel 的关系
+    # Establish relationship with ThreadModel
     thread = relationship("ThreadModel", back_populates="knowledge_bases")
-    files = relationship("FileInfo", back_populates="knowledge_base")  # 文件关系
+    files = relationship("FileInfo", back_populates="knowledge_base")  # File relationship
 
 
 class FileInfo(Base):
     """
-    该表存储文件信息，包括文件路径、文件类型和上传时间等。
+    This table stores file information, including file path, file type, upload time, etc.
     """
     __tablename__ = 'file_info'
 
-    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))  # 文件的唯一标识符
-    filename = Column(String(255), nullable=False)  # 文件名
-    folder_path = Column(String(255), nullable=False)  # 文件存储路径
-    file_extension = Column(String(10), nullable=False)  # 存储文件后缀，长度自行设定
-    upload_time = Column(DateTime(timezone=True), server_default=func.now())  # 上传时间
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))  # File's unique identifier
+    filename = Column(String(255), nullable=False)  # Filename
+    folder_path = Column(String(255), nullable=False)  # File storage path
+    file_extension = Column(String(10), nullable=False)  # Store file extension, length set as needed
+    upload_time = Column(DateTime(timezone=True), server_default=func.now())  # Upload time
     knowledge_base_id = Column(String(36), ForeignKey('knowledge_bases.id', ondelete="SET NULL"),
-                               nullable=True)  # 可选外键关联到KnowledgeBase
+                               nullable=True)  # Optional foreign key associated with KnowledgeBase
 
-    # 建立与KnowledgeBase的关系
+    # Establish relationship with KnowledgeBase
     knowledge_base = relationship("KnowledgeBase", back_populates="files")
 
 
 class DbBase(Base):
     """
-    该表存储数据库配置信息，用于连接多个数据库实例。
+    This table stores database configuration information for connecting to multiple database instances.
     """
     __tablename__ = 'db_configs'
 
@@ -104,30 +104,30 @@ class DbBase(Base):
     username = Column(String(255), nullable=False)
     password = Column(String(255), nullable=False)
     database_name = Column(String(255), nullable=False)
-    created_at = Column(DateTime, default=func.now())  # 自动生成创建时间
+    created_at = Column(DateTime, default=func.now())  # Automatically generate creation time
 
 
 class MessageModel(Base):
     """
-    该表存储与对话线程相关的消息记录，包括用户的问题、代理的响应及消息类型。
+    This table stores message records related to conversation threads, including user questions, agent responses, and message types.
     """
     __tablename__ = 'messages'
 
     id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
-    thread_id = Column(String(255), ForeignKey('threads.id'))  # 外键关联到 ThreadModel
-    question = Column(Text)  # 消息发送者的标识（例如 'user', 'agent' 等）
-    response = Column(Text)  # 消息内容
-    created_at = Column(DateTime(timezone=True), server_default=func.now())  # 消息创建时间自动生成
+    thread_id = Column(String(255), ForeignKey('threads.id'))  # Foreign key associated with ThreadModel
+    question = Column(Text)  # Message sender's identifier (e.g., 'user', 'agent', etc.)
+    response = Column(Text)  # Message content
+    created_at = Column(DateTime(timezone=True), server_default=func.now())  # Message creation time automatically generated
 
-    message_type = Column(String(255))  # 消息类型，例如 'chat', 'python', 'sql'等
-    run_result = Column(Text, nullable=True)  # 执行结果，可用于存储代码执行或命令的输出，此字段可以为空
+    message_type = Column(String(255))  # Message type, e.g., 'chat', 'python', 'sql', etc.
+    run_result = Column(Text, nullable=True)  # Execution result, can be used to store code execution or command output, this field can be empty
 
     knowledge_id = Column(String(36))
     knowledge_name = Column(String(255))
     db_id = Column(String(255))
     db_name = Column(String(255))
 
-    # 反向关系，可以通过 ThreadModel 直接访问其所有消息
+    # Reverse relationship, can directly access all messages through ThreadModel
     thread = relationship("ThreadModel", back_populates="messages")
 
 

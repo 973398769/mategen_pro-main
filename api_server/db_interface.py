@@ -105,11 +105,11 @@ def insert_db_config(db_config: DBConfig):
         )
         session.add(new_db_config)
         session.commit()
-        return str(new_db_config.id)  # 返回 UUID 字符串
+        return str(new_db_config.id)  # Return UUID string
     except HTTPException as http_ex:
         session.rollback()
         session.close()
-        raise http_ex  # 重新抛出捕获的 HTTPException
+        raise http_ex  # Re-raise the captured HTTPException
     except Exception as e:
         session.rollback()
         session.close()

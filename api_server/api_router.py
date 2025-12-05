@@ -35,11 +35,11 @@ from db.init_db import initialize_database
 
 load_dotenv(find_dotenv())
 
-# 获取当前文件所在目录的上一级目录
+# Get the parent directory of the current file's directory
 current_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UPLOAD_FOLDER = os.path.join(current_dir, 'uploads')
 
-# 创建上传文件夹（如果不存在）
+# Create upload folder (if it doesn't exist)
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 
@@ -53,12 +53,12 @@ class UrlModel(BaseModel):
 
 
 class KnowledgeBaseCreateRequest(BaseModel):
-    kb_id: str = Body(None, embed=True, description="知识库的id")
-    knowledge_base_name: str = Body(..., embed=True, description="知识库的名称")
-    chunking_strategy: str = Body("auto", embed=True, description="参数类型，自动参数为auto，手动参数为 static")
+    kb_id: str = Body(None, embed=True, description="Knowledge base ID")
+    knowledge_base_name: str = Body(..., embed=True, description="Knowledge base name")
+    chunking_strategy: str = Body("auto", embed=True, description="Parameter type, auto for automatic parameters, static for manual parameters")
     max_chunk_size_tokens: int = Body(800, embed=True)
     chunk_overlap_tokens: int = Body(400, embed=True)
-    folder_path_base: str = Body(None, embed=True, description="可忽略")  # 可选字段
+    folder_path_base: str = Body(None, embed=True, description="Can be ignored")  # Optional field
 
 
 class KnowledgeBaseDescriptionUpdateRequest(BaseModel):
@@ -90,7 +90,7 @@ def create_app():
         allow_headers=["*"],
     )
 
-    # 挂载路由
+    # Mount routes
     mount_app_routes(app)
 
     # 重定向到 index.html
