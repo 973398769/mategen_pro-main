@@ -1,0 +1,1740 @@
+2024-12-02 19:52:34 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:52:34 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-02 19:52:36 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-02 19:52:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:52:36 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-02 19:52:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:52:36 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-02 19:52:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:52:36 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-02 19:52:36 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-02 19:52:36 - sqlalchemy.engine.Engine - INFO - [generated in 0.00028s] {}
+2024-12-02 19:52:36 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-02 19:52:46 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-02 19:52:46 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x000001FF0FE72410>
+2024-12-02 19:52:46 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x000001FF0FE72410>
+2024-12-02 19:52:47 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x000001FF1091FCD0>
+2024-12-02 19:52:47 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x000001FF1091FCD0>
+2024-12-02 19:52:47 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-02 19:52:47 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-02 19:52:47 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x000001FF0FE72410>
+2024-12-02 19:52:47 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x000001FF1091FCD0>
+2024-12-02 19:52:47 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-02 19:52:47 - httpx - INFO - HTTP Request: GET http://38.61.1.6:5000/proxy//openai/models "HTTP/1.1 308 PERMANENT REDIRECT"
+2024-12-02 19:52:47 - httpx - INFO - HTTP Request: GET http://38.61.1.6:5000/proxy//openai/models "HTTP/1.1 308 PERMANENT REDIRECT"
+2024-12-02 19:52:48 - httpx - INFO - HTTP Request: GET http://38.61.1.6:5000/proxy/openai/models "HTTP/1.1 200 OK"
+2024-12-02 19:52:48 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-02 19:52:48 - root - INFO - 复用assistant实例:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-02 19:52:48 - root - INFO - 完成assistant实例的缓存设置:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-02 19:52:48 - root - INFO - 复用thread实例:thread_1GLupOCUia2ZGBMQSha7yETz
+2024-12-02 19:52:48 - root - INFO - 完成thread实例的缓存设置:thread_1GLupOCUia2ZGBMQSha7yETz
+2024-12-02 19:52:48 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-02 19:52:48 - httpx - INFO - HTTP Request: GET http://38.61.1.6:5000/proxy/openai/models "HTTP/1.1 200 OK"
+2024-12-02 19:52:48 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-02 19:52:48 - root - INFO - 复用assistant实例:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-02 19:52:48 - root - INFO - 复用thread实例:thread_1GLupOCUia2ZGBMQSha7yETz
+2024-12-02 19:52:48 - root - INFO - 完成thread实例的缓存设置:thread_1GLupOCUia2ZGBMQSha7yETz
+2024-12-02 19:52:48 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-02 19:52:53 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy//openai/threads/thread_1GLupOCUia2ZGBMQSha7yETz/messages "HTTP/1.1 308 PERMANENT REDIRECT"
+2024-12-02 19:52:54 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy/openai/threads/thread_1GLupOCUia2ZGBMQSha7yETz/messages "HTTP/1.1 200 OK"
+2024-12-02 19:52:54 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy//openai/threads/thread_1GLupOCUia2ZGBMQSha7yETz/runs "HTTP/1.1 308 PERMANENT REDIRECT"
+2024-12-02 19:52:57 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy/openai/threads/thread_1GLupOCUia2ZGBMQSha7yETz/runs "HTTP/1.1 500 INTERNAL SERVER ERROR"
+2024-12-02 19:52:57 - openai._base_client - INFO - Retrying request to /threads/thread_1GLupOCUia2ZGBMQSha7yETz/runs in 0.442697 seconds
+2024-12-02 19:52:58 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy//openai/threads/thread_1GLupOCUia2ZGBMQSha7yETz/runs "HTTP/1.1 308 PERMANENT REDIRECT"
+2024-12-02 19:53:00 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy/openai/threads/thread_1GLupOCUia2ZGBMQSha7yETz/runs "HTTP/1.1 500 INTERNAL SERVER ERROR"
+2024-12-02 19:53:00 - openai._base_client - INFO - Retrying request to /threads/thread_1GLupOCUia2ZGBMQSha7yETz/runs in 0.851650 seconds
+2024-12-02 19:53:01 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy//openai/threads/thread_1GLupOCUia2ZGBMQSha7yETz/runs "HTTP/1.1 308 PERMANENT REDIRECT"
+2024-12-02 19:53:04 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy/openai/threads/thread_1GLupOCUia2ZGBMQSha7yETz/runs "HTTP/1.1 500 INTERNAL SERVER ERROR"
+2024-12-02 19:53:30 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:53:31 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-02 19:53:32 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-02 19:53:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:53:32 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-02 19:53:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:53:32 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-02 19:53:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:53:32 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-02 19:53:32 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-02 19:53:32 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-02 19:53:32 - sqlalchemy.engine.Engine - INFO - [generated in 0.00170s] {}
+2024-12-02 19:53:32 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-02 19:53:33 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x00000208CDF0C890>
+2024-12-02 19:53:33 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x00000208CDF0C890>
+2024-12-02 19:53:33 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x00000208CEAD3150>
+2024-12-02 19:53:33 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x00000208CEAD3150>
+2024-12-02 19:53:33 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-02 19:53:35 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-02 19:53:35 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x00000208CDF0C890>
+2024-12-02 19:53:35 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x00000208CEAD3150>
+2024-12-02 19:53:35 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-02 19:53:37 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-02 19:53:37 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x00000208CDF0C890>
+2024-12-02 19:53:37 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x00000208CEAD3150>
+2024-12-02 19:53:37 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-02 19:53:38 - openai._base_client - INFO - Retrying request to /models in 0.398168 seconds
+2024-12-02 19:53:40 - openai._base_client - INFO - Retrying request to /models in 0.450070 seconds
+2024-12-02 19:53:42 - openai._base_client - INFO - Retrying request to /models in 0.420688 seconds
+2024-12-02 19:53:43 - openai._base_client - INFO - Retrying request to /models in 0.761713 seconds
+2024-12-02 19:53:45 - openai._base_client - INFO - Retrying request to /models in 0.764715 seconds
+2024-12-02 19:53:47 - openai._base_client - INFO - Retrying request to /models in 0.988812 seconds
+2024-12-02 19:53:49 - root - INFO - 当前网络环境无法连接服务器，请检查网络并稍后重试...
+2024-12-02 19:53:51 - root - INFO - 当前网络环境无法连接服务器，请检查网络并稍后重试...
+2024-12-02 19:53:53 - root - INFO - 当前网络环境无法连接服务器，请检查网络并稍后重试...
+2024-12-02 19:53:53 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-02 19:53:53 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x00000208CDF0C890>
+2024-12-02 19:53:53 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x00000208CEAD3150>
+2024-12-02 19:53:53 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-02 19:53:58 - openai._base_client - INFO - Retrying request to /models in 0.454399 seconds
+2024-12-02 19:54:06 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:54:06 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-02 19:54:08 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-02 19:54:08 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-02 19:54:08 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:54:08 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-02 19:54:08 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:54:08 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-02 19:54:08 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-02 19:54:08 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-02 19:54:08 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-02 19:54:08 - sqlalchemy.engine.Engine - INFO - [generated in 0.00014s] {}
+2024-12-02 19:54:08 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-02 19:54:09 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x000002022D96B590>
+2024-12-02 19:54:09 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x000002022D96B590>
+2024-12-02 19:54:09 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x000002022D99D5D0>
+2024-12-02 19:54:09 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x000002022D99D5D0>
+2024-12-02 19:54:09 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-02 19:54:10 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-02 19:54:10 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x000002022D96B590>
+2024-12-02 19:54:10 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x000002022D99D5D0>
+2024-12-02 19:54:10 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-02 19:54:11 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-02 19:54:11 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-02 19:54:11 - root - INFO - 复用assistant实例:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-02 19:54:11 - root - INFO - 完成assistant实例的缓存设置:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-02 19:54:11 - root - INFO - 复用thread实例:thread_1GLupOCUia2ZGBMQSha7yETz
+2024-12-02 19:54:11 - root - INFO - 完成thread实例的缓存设置:thread_1GLupOCUia2ZGBMQSha7yETz
+2024-12-02 19:54:11 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-02 19:54:11 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-02 19:54:11 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-02 19:54:11 - root - INFO - 复用assistant实例:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-02 19:54:11 - root - INFO - 复用thread实例:thread_1GLupOCUia2ZGBMQSha7yETz
+2024-12-02 19:54:11 - root - INFO - 完成thread实例的缓存设置:thread_1GLupOCUia2ZGBMQSha7yETz
+2024-12-02 19:54:11 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-02 19:54:16 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-02 19:54:16 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x000002022D96B590>
+2024-12-02 19:54:16 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x000002022D99D5D0>
+2024-12-02 19:54:16 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-02 19:54:16 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-02 19:54:16 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-02 19:54:16 - root - INFO - 复用assistant实例:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-02 19:54:16 - root - INFO - 复用thread实例:thread_1GLupOCUia2ZGBMQSha7yETz
+2024-12-02 19:54:16 - root - INFO - 完成thread实例的缓存设置:thread_1GLupOCUia2ZGBMQSha7yETz
+2024-12-02 19:54:16 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-02 19:54:19 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_1GLupOCUia2ZGBMQSha7yETz/messages "HTTP/1.1 200 OK"
+2024-12-02 19:54:20 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_1GLupOCUia2ZGBMQSha7yETz/runs "HTTP/1.1 200 OK"
+2024-12-03 10:03:01 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:02 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-03 10:03:04 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-03 10:03:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:04 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-03 10:03:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:04 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-03 10:03:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:04 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-03 10:03:04 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-03 10:03:04 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-03 10:03:04 - sqlalchemy.engine.Engine - INFO - [generated in 0.00043s] {}
+2024-12-03 10:03:04 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-03 10:03:05 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x0000021E46B68250>
+2024-12-03 10:03:05 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x0000021E46B68250>
+2024-12-03 10:03:06 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x0000021E4711A990>
+2024-12-03 10:03:06 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x0000021E4711A990>
+2024-12-03 10:03:06 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-03 10:03:07 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-03 10:03:07 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:07 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 3
+2024-12-03 10:03:07 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-03 10:03:07 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:07 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x0000021E46B68250>
+2024-12-03 10:03:07 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x0000021E4711A990>
+2024-12-03 10:03:07 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-03 10:03:07 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-03 10:03:07 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:07 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-03 10:03:07 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-03 10:03:07 - sqlalchemy.engine.Engine - INFO - [generated in 0.00018s] {}
+2024-12-03 10:03:07 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-03 10:03:07 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-03 10:03:07 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-03 10:03:07 - root - INFO - 复用assistant实例:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-03 10:03:07 - root - INFO - 完成assistant实例的缓存设置:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-03 10:03:08 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-12-03 10:03:08 - root - INFO - 创建新的thread实例:thread_xf0lmDfkDygp6DyIJofZrJl8
+2024-12-03 10:03:08 - root - INFO - 完成thread实例的缓存设置:thread_xf0lmDfkDygp6DyIJofZrJl8
+2024-12-03 10:03:08 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-03 10:03:08 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-03 10:03:08 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-03 10:03:08 - root - INFO - 复用assistant实例:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-03 10:03:09 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-12-03 10:03:09 - root - INFO - 创建新的thread实例:thread_tB3ivZKBH9BRYT0u9QIQLUdS
+2024-12-03 10:03:09 - root - INFO - 完成thread实例的缓存设置:thread_tB3ivZKBH9BRYT0u9QIQLUdS
+2024-12-03 10:03:09 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-03 10:03:10 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-03 10:03:10 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:10 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-03 10:03:10 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:10 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-03 10:03:10 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-03 10:03:10 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-03 10:03:10 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-03 10:03:10 - sqlalchemy.engine.Engine - INFO - [generated in 0.00016s] {}
+2024-12-03 10:03:10 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:51:52 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 11:51:55 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 11:51:55 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:51:55 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 11:51:55 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:51:55 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 11:51:55 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:51:55 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 11:51:55 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 11:51:55 - sqlalchemy.engine.Engine - INFO - [generated in 0.00266s] {}
+2024-12-05 11:51:55 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 11:52:10 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x000001955ED337D0>
+2024-12-05 11:52:10 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x000001955ED337D0>
+2024-12-05 11:52:10 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x000001955E5186D0>
+2024-12-05 11:52:10 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x000001955E5186D0>
+2024-12-05 11:52:10 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 11:52:15 - openai._base_client - INFO - Retrying request to /models in 0.490193 seconds
+2024-12-05 11:52:20 - openai._base_client - INFO - Retrying request to /models in 0.888896 seconds
+2024-12-05 11:52:26 - root - INFO - 当前网络环境无法连接服务器，请检查网络并稍后重试...
+2024-12-05 11:52:31 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x000001955ED337D0>
+2024-12-05 11:52:31 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x000001955E5186D0>
+2024-12-05 11:52:31 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 11:52:36 - openai._base_client - INFO - Retrying request to /models in 0.453559 seconds
+2024-12-05 11:52:42 - openai._base_client - INFO - Retrying request to /models in 0.903782 seconds
+2024-12-05 11:52:48 - root - INFO - 当前网络环境无法连接服务器，请检查网络并稍后重试...
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:04 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 11:53:06 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 11:53:06 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:06 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 11:53:06 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:06 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 11:53:06 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:06 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 11:53:06 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 11:53:06 - sqlalchemy.engine.Engine - INFO - [generated in 0.00015s] {}
+2024-12-05 11:53:06 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 11:53:06 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x0000019F3D35B9D0>
+2024-12-05 11:53:06 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x0000019F3D35B9D0>
+2024-12-05 11:53:07 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x0000019F3D3B0550>
+2024-12-05 11:53:07 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x0000019F3D3B0550>
+2024-12-05 11:53:07 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 11:53:12 - openai._base_client - INFO - Retrying request to /models in 0.436516 seconds
+2024-12-05 11:53:17 - openai._base_client - INFO - Retrying request to /models in 0.752338 seconds
+2024-12-05 11:53:23 - root - INFO - 当前网络环境无法连接服务器，请检查网络并稍后重试...
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:54 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 11:53:56 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 11:53:56 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:56 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 11:53:56 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:56 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 11:53:56 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:53:56 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 11:53:56 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 11:53:56 - sqlalchemy.engine.Engine - INFO - [generated in 0.00020s] {}
+2024-12-05 11:53:56 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 11:53:57 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x000001EC1629CF50>
+2024-12-05 11:53:57 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x000001EC1629CF50>
+2024-12-05 11:53:57 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x000001EC1681C090>
+2024-12-05 11:53:57 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x000001EC1681C090>
+2024-12-05 11:53:57 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 11:54:07 - openai._base_client - INFO - Retrying request to /models in 0.435302 seconds
+2024-12-05 11:54:17 - openai._base_client - INFO - Retrying request to /models in 0.751956 seconds
+2024-12-05 11:54:28 - root - INFO - 当前网络环境无法连接服务器，请检查网络并稍后重试...
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:54:43 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 11:54:46 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 11:54:46 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:54:46 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 11:54:46 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:54:46 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 11:54:46 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:54:46 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 11:54:46 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 11:54:46 - sqlalchemy.engine.Engine - INFO - [generated in 0.00022s] {}
+2024-12-05 11:54:46 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 11:54:47 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x000001F794C23A90>
+2024-12-05 11:54:47 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x000001F794C23A90>
+2024-12-05 11:54:47 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x000001F794757390>
+2024-12-05 11:54:47 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x000001F794757390>
+2024-12-05 11:54:47 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 11:54:47 - httpx - INFO - HTTP Request: GET http://38.61.1.6:5000/proxy//openai/models "HTTP/1.1 308 PERMANENT REDIRECT"
+2024-12-05 11:54:48 - httpx - INFO - HTTP Request: GET http://38.61.1.6:5000/proxy/openai/models "HTTP/1.1 200 OK"
+2024-12-05 11:54:48 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-05 11:54:48 - root - INFO - 复用assistant实例:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-05 11:54:48 - root - INFO - 完成assistant实例的缓存设置:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-05 11:54:48 - root - INFO - 复用thread实例:thread_tB3ivZKBH9BRYT0u9QIQLUdS
+2024-12-05 11:54:48 - root - INFO - 完成thread实例的缓存设置:thread_tB3ivZKBH9BRYT0u9QIQLUdS
+2024-12-05 11:54:48 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-05 11:58:17 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy//openai/threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/messages "HTTP/1.1 308 PERMANENT REDIRECT"
+2024-12-05 11:58:18 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy/openai/threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/messages "HTTP/1.1 200 OK"
+2024-12-05 11:58:18 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy//openai/threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/runs "HTTP/1.1 308 PERMANENT REDIRECT"
+2024-12-05 11:58:21 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy/openai/threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/runs "HTTP/1.1 500 INTERNAL SERVER ERROR"
+2024-12-05 11:58:21 - openai._base_client - INFO - Retrying request to /threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/runs in 0.464258 seconds
+2024-12-05 11:58:21 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy//openai/threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/runs "HTTP/1.1 308 PERMANENT REDIRECT"
+2024-12-05 11:58:24 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy/openai/threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/runs "HTTP/1.1 500 INTERNAL SERVER ERROR"
+2024-12-05 11:58:24 - openai._base_client - INFO - Retrying request to /threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/runs in 0.793285 seconds
+2024-12-05 11:58:25 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy//openai/threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/runs "HTTP/1.1 308 PERMANENT REDIRECT"
+2024-12-05 11:58:27 - httpx - INFO - HTTP Request: POST http://38.61.1.6:5000/proxy/openai/threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/runs "HTTP/1.1 500 INTERNAL SERVER ERROR"
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:59:16 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 11:59:18 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 11:59:18 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:59:18 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 11:59:18 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:59:18 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 11:59:18 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 11:59:18 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 11:59:18 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 11:59:18 - sqlalchemy.engine.Engine - INFO - [generated in 0.00077s] {}
+2024-12-05 11:59:18 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 11:59:19 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x00000251399A5FD0>
+2024-12-05 11:59:19 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x00000251399A5FD0>
+2024-12-05 11:59:19 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x00000251398AD5D0>
+2024-12-05 11:59:19 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x00000251398AD5D0>
+2024-12-05 11:59:19 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 11:59:21 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-05 11:59:21 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-05 11:59:21 - root - INFO - 复用assistant实例:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-05 11:59:21 - root - INFO - 完成assistant实例的缓存设置:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-05 11:59:21 - root - INFO - 复用thread实例:thread_tB3ivZKBH9BRYT0u9QIQLUdS
+2024-12-05 11:59:21 - root - INFO - 完成thread实例的缓存设置:thread_tB3ivZKBH9BRYT0u9QIQLUdS
+2024-12-05 11:59:21 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-05 11:59:24 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/messages "HTTP/1.1 200 OK"
+2024-12-05 11:59:25 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/runs "HTTP/1.1 200 OK"
+2024-12-05 11:59:38 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/messages "HTTP/1.1 200 OK"
+2024-12-05 11:59:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_tB3ivZKBH9BRYT0u9QIQLUdS/runs "HTTP/1.1 200 OK"
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:02:26 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 12:02:35 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 12:02:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:02:36 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 12:02:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:02:36 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 12:02:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:02:36 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 12:02:36 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 12:02:36 - sqlalchemy.engine.Engine - INFO - [generated in 0.00028s] {}
+2024-12-05 12:02:36 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 12:02:36 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x000002228BB65390>
+2024-12-05 12:02:36 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x000002228BB65390>
+2024-12-05 12:02:36 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x000002228B627510>
+2024-12-05 12:02:36 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x000002228B627510>
+2024-12-05 12:02:36 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 12:02:46 - openai._base_client - INFO - Retrying request to /models in 0.484797 seconds
+2024-12-05 12:02:56 - openai._base_client - INFO - Retrying request to /models in 0.939285 seconds
+2024-12-05 12:03:07 - root - INFO - 当前网络环境无法连接服务器，请检查网络并稍后重试...
+2024-12-05 12:36:03 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x000002228BB65390>
+2024-12-05 12:36:03 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x000002228B627510>
+2024-12-05 12:36:03 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 12:36:04 - httpx - INFO - HTTP Request: GET https://ai.devtool.tech/proxy/v1/models "HTTP/1.1 200 OK"
+2024-12-05 12:36:04 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-05 12:36:04 - root - INFO - 复用assistant实例:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-05 12:36:04 - root - INFO - 完成assistant实例的缓存设置:asst_ypRP9Umv1UdQxTEruDNeOYtN
+2024-12-05 12:36:04 - root - INFO - 复用thread实例:thread_xf0lmDfkDygp6DyIJofZrJl8
+2024-12-05 12:36:04 - root - INFO - 完成thread实例的缓存设置:thread_xf0lmDfkDygp6DyIJofZrJl8
+2024-12-05 12:36:04 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-05 12:36:07 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 12:36:07 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:36:07 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 12:36:07 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:36:07 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 12:36:07 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:36:07 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 12:36:07 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 12:36:07 - sqlalchemy.engine.Engine - INFO - [generated in 0.00023s] {}
+2024-12-05 12:36:07 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 12:36:23 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 12:36:23 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:36:23 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 12:36:23 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:36:23 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 12:36:23 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:36:23 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 12:36:23 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 12:36:23 - sqlalchemy.engine.Engine - INFO - [generated in 0.00014s] {}
+2024-12-05 12:36:23 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 12:38:21 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 12:38:21 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:38:21 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 12:38:21 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:38:21 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 12:38:21 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 12:38:21 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 12:38:21 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 12:38:21 - sqlalchemy.engine.Engine - INFO - [generated in 0.00013s] {}
+2024-12-05 12:38:21 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE agents (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	assis_id VARCHAR(255) NOT NULL, 
+	api_key VARCHAR(768) NOT NULL, 
+	user_id VARCHAR(255) NOT NULL, 
+	initialized BOOL, 
+	agent_type VARCHAR(255), 
+	created_at DATETIME DEFAULT now(), 
+	updated_at DATETIME DEFAULT now(), 
+	PRIMARY KEY (id), 
+	UNIQUE (assis_id), 
+	UNIQUE (api_key), 
+	UNIQUE (user_id)
+)
+
+
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [no key 0.00013s] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE db_configs (
+	id VARCHAR(36) NOT NULL, 
+	hostname VARCHAR(255) NOT NULL, 
+	port INTEGER NOT NULL, 
+	username VARCHAR(255) NOT NULL, 
+	password VARCHAR(255) NOT NULL, 
+	database_name VARCHAR(255) NOT NULL, 
+	created_at DATETIME, 
+	PRIMARY KEY (id)
+)
+
+
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [no key 0.00015s] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE threads (
+	id VARCHAR(255) NOT NULL, 
+	agent_id VARCHAR(255), 
+	conversation_name VARCHAR(255), 
+	run_mode VARCHAR(255), 
+	created_at DATETIME DEFAULT now(), 
+	updated_at DATETIME DEFAULT now(), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(agent_id) REFERENCES agents (assis_id)
+)
+
+
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [no key 0.00015s] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE knowledge_bases (
+	id VARCHAR(36) NOT NULL, 
+	vector_store_id VARCHAR(255), 
+	chunking_strategy VARCHAR(255), 
+	max_chunk_size_tokens INTEGER, 
+	chunk_overlap_tokens INTEGER, 
+	knowledge_base_name VARCHAR(255) NOT NULL, 
+	created_at DATETIME, 
+	display_knowledge_base_name VARCHAR(255) NOT NULL, 
+	knowledge_base_description TEXT, 
+	thread_id VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(thread_id) REFERENCES threads (id)
+)
+
+
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [no key 0.00015s] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE messages (
+	id VARCHAR(36) NOT NULL, 
+	thread_id VARCHAR(255), 
+	question TEXT, 
+	response TEXT, 
+	created_at DATETIME DEFAULT now(), 
+	message_type VARCHAR(255), 
+	run_result TEXT, 
+	knowledge_id VARCHAR(36), 
+	knowledge_name VARCHAR(255), 
+	db_id VARCHAR(255), 
+	db_name VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(thread_id) REFERENCES threads (id)
+)
+
+
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [no key 0.00016s] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE file_info (
+	id VARCHAR(36) NOT NULL, 
+	filename VARCHAR(255) NOT NULL, 
+	folder_path VARCHAR(255) NOT NULL, 
+	file_extension VARCHAR(10) NOT NULL, 
+	upload_time DATETIME DEFAULT now(), 
+	knowledge_base_id VARCHAR(36), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(knowledge_base_id) REFERENCES knowledge_bases (id) ON DELETE SET NULL
+)
+
+
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - [no key 0.00015s] {}
+2024-12-05 13:34:24 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 13:35:17 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 13:35:17 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:35:17 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 13:35:17 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:35:17 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 13:35:17 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:35:17 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 13:35:17 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 13:35:17 - sqlalchemy.engine.Engine - INFO - [generated in 0.00061s] {}
+2024-12-05 13:35:17 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:37:11 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 13:39:27 - openai._base_client - INFO - Retrying request to /models in 0.402671 seconds
+2024-12-05 13:39:33 - openai._base_client - INFO - Retrying request to /models in 0.869421 seconds
+2024-12-05 13:39:39 - root - ERROR - PI error: Request timed out.
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:44:08 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 13:44:16 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2024-12-05 13:44:16 - root - ERROR - PI error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: 233. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-12-05 13:44:28 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-05 13:44:29 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 13:44:29 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:44:29 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 13:44:29 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:44:29 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 13:44:29 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:44:29 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 13:44:29 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 13:44:29 - sqlalchemy.engine.Engine - INFO - [generated in 0.00011s] {}
+2024-12-05 13:44:29 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 13:44:29 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x000001A34BA9DC50>
+2024-12-05 13:44:29 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x000001A34BA9DC50>
+2024-12-05 13:44:30 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x000001A34BA32110>
+2024-12-05 13:44:30 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x000001A34BA32110>
+2024-12-05 13:44:30 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 13:44:30 - openai._base_client - INFO - Retrying request to /models in 0.484575 seconds
+2024-12-05 13:44:30 - openai._base_client - INFO - Retrying request to /models in 0.961382 seconds
+2024-12-05 13:44:31 - root - INFO - 当前网络环境无法连接服务器，请检查网络并稍后重试...
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE agents (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	assis_id VARCHAR(255) NOT NULL, 
+	api_key VARCHAR(768) NOT NULL, 
+	user_id VARCHAR(255) NOT NULL, 
+	initialized BOOL, 
+	agent_type VARCHAR(255), 
+	created_at DATETIME DEFAULT now(), 
+	updated_at DATETIME DEFAULT now(), 
+	PRIMARY KEY (id), 
+	UNIQUE (assis_id), 
+	UNIQUE (api_key), 
+	UNIQUE (user_id)
+)
+
+
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [no key 0.00011s] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE db_configs (
+	id VARCHAR(36) NOT NULL, 
+	hostname VARCHAR(255) NOT NULL, 
+	port INTEGER NOT NULL, 
+	username VARCHAR(255) NOT NULL, 
+	password VARCHAR(255) NOT NULL, 
+	database_name VARCHAR(255) NOT NULL, 
+	created_at DATETIME, 
+	PRIMARY KEY (id)
+)
+
+
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [no key 0.00018s] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE threads (
+	id VARCHAR(255) NOT NULL, 
+	agent_id VARCHAR(255), 
+	conversation_name VARCHAR(255), 
+	run_mode VARCHAR(255), 
+	created_at DATETIME DEFAULT now(), 
+	updated_at DATETIME DEFAULT now(), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(agent_id) REFERENCES agents (assis_id)
+)
+
+
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [no key 0.00016s] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE knowledge_bases (
+	id VARCHAR(36) NOT NULL, 
+	vector_store_id VARCHAR(255), 
+	chunking_strategy VARCHAR(255), 
+	max_chunk_size_tokens INTEGER, 
+	chunk_overlap_tokens INTEGER, 
+	knowledge_base_name VARCHAR(255) NOT NULL, 
+	created_at DATETIME, 
+	display_knowledge_base_name VARCHAR(255) NOT NULL, 
+	knowledge_base_description TEXT, 
+	thread_id VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(thread_id) REFERENCES threads (id)
+)
+
+
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [no key 0.00027s] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE messages (
+	id VARCHAR(36) NOT NULL, 
+	thread_id VARCHAR(255), 
+	question TEXT, 
+	response TEXT, 
+	created_at DATETIME DEFAULT now(), 
+	message_type VARCHAR(255), 
+	run_result TEXT, 
+	knowledge_id VARCHAR(36), 
+	knowledge_name VARCHAR(255), 
+	db_id VARCHAR(255), 
+	db_name VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(thread_id) REFERENCES threads (id)
+)
+
+
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [no key 0.00021s] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE file_info (
+	id VARCHAR(36) NOT NULL, 
+	filename VARCHAR(255) NOT NULL, 
+	folder_path VARCHAR(255) NOT NULL, 
+	file_extension VARCHAR(10) NOT NULL, 
+	upload_time DATETIME DEFAULT now(), 
+	knowledge_base_id VARCHAR(36), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(knowledge_base_id) REFERENCES knowledge_bases (id) ON DELETE SET NULL
+)
+
+
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - [no key 0.00015s] {}
+2024-12-05 13:47:32 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 13:47:51 - openai._base_client - INFO - Retrying request to /models in 0.478185 seconds
+2024-12-05 13:47:57 - openai._base_client - INFO - Retrying request to /models in 0.972337 seconds
+2024-12-05 13:48:03 - root - ERROR - PI error: Request timed out.
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:48:33 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 13:48:50 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-05 13:48:50 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 13:48:50 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:48:50 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 13:48:50 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:48:50 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 13:48:50 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:48:50 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 13:48:50 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 13:48:50 - sqlalchemy.engine.Engine - INFO - [generated in 0.00015s] {}
+2024-12-05 13:48:50 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 13:48:51 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x0000022806342BD0>
+2024-12-05 13:48:51 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x0000022806342BD0>
+2024-12-05 13:48:51 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x000002280632D690>
+2024-12-05 13:48:51 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x000002280632D690>
+2024-12-05 13:48:51 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 13:48:51 - openai._base_client - INFO - Retrying request to /models in 0.381538 seconds
+2024-12-05 13:48:52 - openai._base_client - INFO - Retrying request to /models in 0.847928 seconds
+2024-12-05 13:48:52 - root - INFO - 当前网络环境无法连接服务器，请检查网络并稍后重试...
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:36 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:39 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 13:49:41 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 13:49:41 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:41 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 13:49:41 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:41 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 13:49:41 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 13:49:41 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 13:49:41 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 13:49:41 - sqlalchemy.engine.Engine - INFO - [generated in 0.00015s] {}
+2024-12-05 13:49:41 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 13:49:42 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x0000017A51B91710>
+2024-12-05 13:49:42 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x0000017A51B91710>
+2024-12-05 13:49:42 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x0000017A520F5C50>
+2024-12-05 13:49:42 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x0000017A520F5C50>
+2024-12-05 13:49:42 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 13:49:43 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-05 13:49:43 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-05 13:49:43 - root - INFO - 首次使用MateGen，正在进行Agent初始化设置...
+2024-12-05 13:49:44 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/assistants "HTTP/1.1 200 OK"
+2024-12-05 13:49:44 - root - INFO - 创建新的assistant实例:asst_3BIGtXHDWFyNW3icskSD4ZzU
+2024-12-05 13:49:44 - root - INFO - 完成assistant实例的缓存设置:asst_3BIGtXHDWFyNW3icskSD4ZzU
+2024-12-05 13:49:47 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-12-05 13:49:47 - root - INFO - 创建新的thread实例:thread_n3g3e9QNwa10t3zgjFVmyj3U
+2024-12-05 13:49:47 - root - INFO - 完成thread实例的缓存设置:thread_n3g3e9QNwa10t3zgjFVmyj3U
+2024-12-05 13:49:47 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-05 13:52:42 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_n3g3e9QNwa10t3zgjFVmyj3U/messages "HTTP/1.1 200 OK"
+2024-12-05 13:52:43 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_n3g3e9QNwa10t3zgjFVmyj3U/runs "HTTP/1.1 200 OK"
+2024-12-05 13:53:55 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x0000017A51B91710>
+2024-12-05 13:53:55 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x0000017A520F5C50>
+2024-12-05 13:53:55 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 13:53:56 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-05 13:53:56 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-05 13:53:56 - root - INFO - 复用assistant实例:asst_3BIGtXHDWFyNW3icskSD4ZzU
+2024-12-05 13:53:57 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-12-05 13:53:57 - root - INFO - 创建新的thread实例:thread_2apyWbm4yWxafT3Bgk0GhLhi
+2024-12-05 13:53:57 - root - INFO - 完成thread实例的缓存设置:thread_2apyWbm4yWxafT3Bgk0GhLhi
+2024-12-05 13:53:57 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-05 13:54:05 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_2apyWbm4yWxafT3Bgk0GhLhi/messages "HTTP/1.1 200 OK"
+2024-12-05 13:54:06 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_2apyWbm4yWxafT3Bgk0GhLhi/runs "HTTP/1.1 200 OK"
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE agents (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	assis_id VARCHAR(255) NOT NULL, 
+	api_key VARCHAR(768) NOT NULL, 
+	user_id VARCHAR(255) NOT NULL, 
+	initialized BOOL, 
+	agent_type VARCHAR(255), 
+	created_at DATETIME DEFAULT now(), 
+	updated_at DATETIME DEFAULT now(), 
+	PRIMARY KEY (id), 
+	UNIQUE (assis_id), 
+	UNIQUE (api_key), 
+	UNIQUE (user_id)
+)
+
+
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [no key 0.00014s] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE db_configs (
+	id VARCHAR(36) NOT NULL, 
+	hostname VARCHAR(255) NOT NULL, 
+	port INTEGER NOT NULL, 
+	username VARCHAR(255) NOT NULL, 
+	password VARCHAR(255) NOT NULL, 
+	database_name VARCHAR(255) NOT NULL, 
+	created_at DATETIME, 
+	PRIMARY KEY (id)
+)
+
+
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [no key 0.00019s] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE threads (
+	id VARCHAR(255) NOT NULL, 
+	agent_id VARCHAR(255), 
+	conversation_name VARCHAR(255), 
+	run_mode VARCHAR(255), 
+	created_at DATETIME DEFAULT now(), 
+	updated_at DATETIME DEFAULT now(), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(agent_id) REFERENCES agents (assis_id)
+)
+
+
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [no key 0.00019s] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE knowledge_bases (
+	id VARCHAR(36) NOT NULL, 
+	vector_store_id VARCHAR(255), 
+	chunking_strategy VARCHAR(255), 
+	max_chunk_size_tokens INTEGER, 
+	chunk_overlap_tokens INTEGER, 
+	knowledge_base_name VARCHAR(255) NOT NULL, 
+	created_at DATETIME, 
+	display_knowledge_base_name VARCHAR(255) NOT NULL, 
+	knowledge_base_description TEXT, 
+	thread_id VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(thread_id) REFERENCES threads (id)
+)
+
+
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [no key 0.00016s] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE messages (
+	id VARCHAR(36) NOT NULL, 
+	thread_id VARCHAR(255), 
+	question TEXT, 
+	response TEXT, 
+	created_at DATETIME DEFAULT now(), 
+	message_type VARCHAR(255), 
+	run_result TEXT, 
+	knowledge_id VARCHAR(36), 
+	knowledge_name VARCHAR(255), 
+	db_id VARCHAR(255), 
+	db_name VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(thread_id) REFERENCES threads (id)
+)
+
+
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [no key 0.00017s] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE file_info (
+	id VARCHAR(36) NOT NULL, 
+	filename VARCHAR(255) NOT NULL, 
+	folder_path VARCHAR(255) NOT NULL, 
+	file_extension VARCHAR(10) NOT NULL, 
+	upload_time DATETIME DEFAULT now(), 
+	knowledge_base_id VARCHAR(36), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(knowledge_base_id) REFERENCES knowledge_bases (id) ON DELETE SET NULL
+)
+
+
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - [no key 0.00016s] {}
+2024-12-05 14:07:25 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-05 14:07:29 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 14:07:29 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:29 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 14:07:29 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:29 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 14:07:29 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:29 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 14:07:29 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 14:07:29 - sqlalchemy.engine.Engine - INFO - [generated in 0.00029s] {}
+2024-12-05 14:07:29 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 14:07:31 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 14:07:31 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:31 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 14:07:31 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:31 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 14:07:31 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:07:31 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 14:07:31 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 14:07:31 - sqlalchemy.engine.Engine - INFO - [generated in 0.00013s] {}
+2024-12-05 14:07:31 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 14:08:32 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-05 14:08:33 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-05 14:08:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:08:33 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-05 14:08:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:08:33 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-05 14:08:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-05 14:08:33 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-05 14:08:33 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-05 14:08:33 - sqlalchemy.engine.Engine - INFO - [generated in 0.00029s] {}
+2024-12-05 14:08:33 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-05 14:08:33 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x0000019C14491190>
+2024-12-05 14:08:33 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x0000019C14491190>
+2024-12-05 14:08:34 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x0000019C144B3F50>
+2024-12-05 14:08:34 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x0000019C144B3F50>
+2024-12-05 14:08:34 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-05 14:08:35 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-05 14:08:35 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-05 14:08:35 - root - INFO - 首次使用MateGen，正在进行Agent初始化设置...
+2024-12-05 14:08:35 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/assistants "HTTP/1.1 200 OK"
+2024-12-05 14:08:35 - root - INFO - 创建新的assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-05 14:08:35 - root - INFO - 完成assistant实例的缓存设置:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-05 14:08:36 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-12-05 14:08:36 - root - INFO - 创建新的thread实例:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-05 14:08:36 - root - INFO - 完成thread实例的缓存设置:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-05 14:08:36 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:44:58 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:38 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:47:50 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 10:49:35 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:09 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-06 12:25:12 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:25:12 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:12 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:25:12 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:12 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:25:12 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:12 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:25:12 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:25:12 - sqlalchemy.engine.Engine - INFO - [generated in 0.00033s] {}
+2024-12-06 12:25:12 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:25:30 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:25:30 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:30 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:25:30 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:30 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:25:30 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:25:30 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:25:30 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:25:30 - sqlalchemy.engine.Engine - INFO - [generated in 0.00039s] {}
+2024-12-06 12:25:30 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:25:30 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x0000028D06353D10>
+2024-12-06 12:25:30 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x0000028D06353D10>
+2024-12-06 12:25:31 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x0000028D06A0B190>
+2024-12-06 12:25:31 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x0000028D06A0B190>
+2024-12-06 12:25:31 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:25:32 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:25:32 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:25:32 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:25:32 - root - INFO - 完成assistant实例的缓存设置:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:25:32 - root - INFO - 复用thread实例:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:25:32 - root - INFO - 完成thread实例的缓存设置:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:25:32 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:25:44 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/messages "HTTP/1.1 200 OK"
+2024-12-06 12:25:45 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/runs "HTTP/1.1 200 OK"
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:26:20 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-06 12:26:23 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:26:23 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:26:23 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:26:23 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:26:23 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:26:23 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:26:23 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:26:23 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:26:23 - sqlalchemy.engine.Engine - INFO - [generated in 0.00102s] {}
+2024-12-06 12:26:23 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:26:24 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x00000177F2C438D0>
+2024-12-06 12:26:24 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x00000177F2C438D0>
+2024-12-06 12:26:24 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x00000177F31CA550>
+2024-12-06 12:26:24 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x00000177F31CA550>
+2024-12-06 12:26:24 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:26:26 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:26:26 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:26:26 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:26:26 - root - INFO - 完成assistant实例的缓存设置:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:26:26 - root - INFO - 复用thread实例:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:26:26 - root - INFO - 完成thread实例的缓存设置:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:26:26 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:26:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/messages "HTTP/1.1 400 Bad Request"
+2024-12-06 12:26:45 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x00000177F2C438D0>
+2024-12-06 12:26:45 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x00000177F31CA550>
+2024-12-06 12:26:45 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:26:47 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:26:47 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:26:47 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:26:47 - root - INFO - 复用thread实例:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:26:47 - root - INFO - 完成thread实例的缓存设置:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:26:47 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:26:51 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/messages "HTTP/1.1 400 Bad Request"
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:32:22 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-06 12:32:25 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:32:25 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:32:25 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:32:25 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:32:25 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:32:25 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:32:25 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:32:25 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:32:25 - sqlalchemy.engine.Engine - INFO - [generated in 0.00047s] {}
+2024-12-06 12:32:25 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:32:25 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x0000019CEC869AD0>
+2024-12-06 12:32:25 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x0000019CEC869AD0>
+2024-12-06 12:32:26 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x0000019CECE86990>
+2024-12-06 12:32:26 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x0000019CECE86990>
+2024-12-06 12:32:26 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:32:27 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x0000019CEC869AD0>
+2024-12-06 12:32:27 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x0000019CECE86990>
+2024-12-06 12:32:27 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:32:27 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:32:27 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:32:27 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:32:27 - root - INFO - 完成assistant实例的缓存设置:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:32:27 - root - INFO - 复用thread实例:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:32:27 - root - INFO - 完成thread实例的缓存设置:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:32:27 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:32:28 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:32:28 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:32:28 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:32:28 - root - INFO - 复用thread实例:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:32:28 - root - INFO - 完成thread实例的缓存设置:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:32:28 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:32:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/messages "HTTP/1.1 400 Bad Request"
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:20 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:33 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-06 12:33:35 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:33:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:35 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:33:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:35 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:33:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:35 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:33:35 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:33:35 - sqlalchemy.engine.Engine - INFO - [generated in 0.00044s] {}
+2024-12-06 12:33:35 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:33:36 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x000002B5D6306F90>
+2024-12-06 12:33:36 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x000002B5D6306F90>
+2024-12-06 12:33:36 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x000002B5D63C6AD0>
+2024-12-06 12:33:36 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x000002B5D63C6AD0>
+2024-12-06 12:33:36 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:33:37 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x000002B5D6306F90>
+2024-12-06 12:33:37 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x000002B5D63C6AD0>
+2024-12-06 12:33:37 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:33:37 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:33:37 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:37 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:33:37 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:37 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:33:37 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:33:37 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:33:37 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:33:37 - sqlalchemy.engine.Engine - INFO - [generated in 0.00036s] {}
+2024-12-06 12:33:37 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:33:38 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:33:38 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:33:38 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:33:38 - root - INFO - 完成assistant实例的缓存设置:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:33:38 - root - INFO - 复用thread实例:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:33:38 - root - INFO - 完成thread实例的缓存设置:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:33:38 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:33:38 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:33:38 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:33:38 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:33:38 - root - INFO - 复用thread实例:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:33:38 - root - INFO - 完成thread实例的缓存设置:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:33:38 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:33:45 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/messages "HTTP/1.1 400 Bad Request"
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:12 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-06 12:37:14 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:37:14 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:14 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:37:14 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:14 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:37:14 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:14 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:37:14 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:37:14 - sqlalchemy.engine.Engine - INFO - [generated in 0.00026s] {}
+2024-12-06 12:37:14 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:37:14 - root - INFO - 创建新的client客户端:<openai.OpenAI object at 0x00000126DDA922D0>
+2024-12-06 12:37:14 - root - INFO - 完成client客户端的缓存设置:<openai.OpenAI object at 0x00000126DDA922D0>
+2024-12-06 12:37:15 - root - INFO - 创建新的async_client客户端:<openai.AsyncOpenAI object at 0x00000126DE026BD0>
+2024-12-06 12:37:15 - root - INFO - 完成async_client客户端的缓存设置:<openai.AsyncOpenAI object at 0x00000126DE026BD0>
+2024-12-06 12:37:15 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:37:16 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:37:16 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:37:16 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:37:16 - root - INFO - 完成assistant实例的缓存设置:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:37:16 - root - INFO - 复用thread实例:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:37:16 - root - INFO - 完成thread实例的缓存设置:thread_Rkn7C7ij8rCDra1BPjGn6XSd
+2024-12-06 12:37:16 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:37:23 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/messages "HTTP/1.1 200 OK"
+2024-12-06 12:37:24 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/runs "HTTP/1.1 200 OK"
+2024-12-06 12:37:47 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x00000126DDA922D0>
+2024-12-06 12:37:47 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x00000126DE026BD0>
+2024-12-06 12:37:47 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:37:48 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:37:48 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:37:48 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:37:48 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-12-06 12:37:48 - root - INFO - 创建新的thread实例:thread_2CeCsdheDTFATJl8jKQd8lSY
+2024-12-06 12:37:48 - root - INFO - 完成thread实例的缓存设置:thread_2CeCsdheDTFATJl8jKQd8lSY
+2024-12-06 12:37:48 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:37:49 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+2024-12-06 12:37:51 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x00000126DDA922D0>
+2024-12-06 12:37:51 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x00000126DE026BD0>
+2024-12-06 12:37:51 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:37:51 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:37:51 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:37:51 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:37:51 - root - INFO - 复用thread实例:thread_2CeCsdheDTFATJl8jKQd8lSY
+2024-12-06 12:37:51 - root - INFO - 完成thread实例的缓存设置:thread_2CeCsdheDTFATJl8jKQd8lSY
+2024-12-06 12:37:51 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:37:51 - root - INFO - 正在创建知识库的向量存储，请稍后...
+2024-12-06 12:37:52 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/vector_stores "HTTP/1.1 200 OK"
+2024-12-06 12:37:53 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/vector_stores/vs_0DtPomMU1YGRq09jKQPkgVW6/file_batches "HTTP/1.1 200 OK"
+2024-12-06 12:37:53 - root - INFO - 知识库创建完成！
+2024-12-06 12:37:59 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:37:59 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:59 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:37:59 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:59 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:37:59 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:37:59 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:37:59 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:37:59 - sqlalchemy.engine.Engine - INFO - [generated in 0.00015s] {}
+2024-12-06 12:37:59 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:38:04 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x00000126DDA922D0>
+2024-12-06 12:38:04 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x00000126DE026BD0>
+2024-12-06 12:38:04 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:38:04 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:38:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:38:04 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:38:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:38:04 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:38:04 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:38:04 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:38:04 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:38:04 - sqlalchemy.engine.Engine - INFO - [generated in 0.00017s] {}
+2024-12-06 12:38:04 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:38:05 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:38:05 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:38:05 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:38:05 - root - INFO - 复用thread实例:thread_2CeCsdheDTFATJl8jKQd8lSY
+2024-12-06 12:38:05 - root - INFO - 完成thread实例的缓存设置:thread_2CeCsdheDTFATJl8jKQd8lSY
+2024-12-06 12:38:05 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:38:19 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x00000126DDA922D0>
+2024-12-06 12:38:19 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x00000126DE026BD0>
+2024-12-06 12:38:19 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:38:20 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:38:20 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:38:20 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:38:20 - root - INFO - 复用thread实例:thread_2CeCsdheDTFATJl8jKQd8lSY
+2024-12-06 12:38:21 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/assistants/asst_vSE4XbTRofy41tGWJcdc8xuC "HTTP/1.1 200 OK"
+2024-12-06 12:38:21 - root - INFO - 更新assistant对象实例
+2024-12-06 12:38:21 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:38:27 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_2CeCsdheDTFATJl8jKQd8lSY/messages "HTTP/1.1 200 OK"
+2024-12-06 12:38:28 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_2CeCsdheDTFATJl8jKQd8lSY/runs "HTTP/1.1 200 OK"
+2024-12-06 12:38:41 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x00000126DDA922D0>
+2024-12-06 12:38:41 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x00000126DE026BD0>
+2024-12-06 12:38:41 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:38:41 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:38:41 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:38:41 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:38:41 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:38:41 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:38:41 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:38:41 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:38:41 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:38:41 - sqlalchemy.engine.Engine - INFO - [generated in 0.00017s] {}
+2024-12-06 12:38:41 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:38:43 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:38:43 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:38:43 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:38:44 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-12-06 12:38:44 - root - INFO - 创建新的thread实例:thread_O4BlsNUbN1S6ZN1tLoo7bJiY
+2024-12-06 12:38:44 - root - INFO - 完成thread实例的缓存设置:thread_O4BlsNUbN1S6ZN1tLoo7bJiY
+2024-12-06 12:38:44 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:39:19 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:39:19 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:39:19 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:39:19 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:39:19 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:39:19 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:39:19 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:39:19 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:39:19 - sqlalchemy.engine.Engine - INFO - [generated in 0.00015s] {}
+2024-12-06 12:39:19 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:39:24 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:39:24 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:39:24 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:39:24 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:39:24 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:39:24 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:39:24 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:39:24 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:39:24 - sqlalchemy.engine.Engine - INFO - [generated in 0.00021s] {}
+2024-12-06 12:39:24 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:39:45 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/messages "HTTP/1.1 200 OK"
+2024-12-06 12:39:46 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/runs "HTTP/1.1 200 OK"
+2024-12-06 12:40:28 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/messages "HTTP/1.1 200 OK"
+2024-12-06 12:40:28 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/runs "HTTP/1.1 200 OK"
+2024-12-06 12:41:04 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/messages "HTTP/1.1 200 OK"
+2024-12-06 12:41:06 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Rkn7C7ij8rCDra1BPjGn6XSd/runs "HTTP/1.1 200 OK"
+2024-12-06 12:41:24 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x00000126DDA922D0>
+2024-12-06 12:41:24 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x00000126DE026BD0>
+2024-12-06 12:41:24 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:41:25 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:41:25 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:41:25 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:41:25 - root - INFO - 复用thread实例:thread_O4BlsNUbN1S6ZN1tLoo7bJiY
+2024-12-06 12:41:25 - root - INFO - 完成thread实例的缓存设置:thread_O4BlsNUbN1S6ZN1tLoo7bJiY
+2024-12-06 12:41:25 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:41:28 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_O4BlsNUbN1S6ZN1tLoo7bJiY/messages "HTTP/1.1 200 OK"
+2024-12-06 12:41:29 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_O4BlsNUbN1S6ZN1tLoo7bJiY/runs "HTTP/1.1 200 OK"
+2024-12-06 12:41:38 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:41:38 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:41:38 - root - INFO - 正在复用client客户端:<openai.OpenAI object at 0x00000126DDA922D0>
+2024-12-06 12:41:38 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:41:38 - root - INFO - 正在复用async_client客户端:<openai.AsyncOpenAI object at 0x00000126DE026BD0>
+2024-12-06 12:41:38 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:41:38 - root - INFO - 正在初始化MateGen对象实例，请稍后...
+2024-12-06 12:41:38 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:41:38 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:41:38 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:41:38 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:41:38 - sqlalchemy.engine.Engine - INFO - [generated in 0.00033s] {}
+2024-12-06 12:41:38 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 12:41:39 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2024-12-06 12:41:39 - root - INFO - API_KEY已通过验证，成功连接到服务器...
+2024-12-06 12:41:39 - root - INFO - 复用assistant实例:asst_vSE4XbTRofy41tGWJcdc8xuC
+2024-12-06 12:41:40 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-12-06 12:41:40 - root - INFO - 创建新的thread实例:thread_7amgeqkbuvOAixXW0y4yBXqy
+2024-12-06 12:41:40 - root - INFO - 完成thread实例的缓存设置:thread_7amgeqkbuvOAixXW0y4yBXqy
+2024-12-06 12:41:40 - root - INFO - 已完成初始化，MateGen可随时调用！
+2024-12-06 12:41:55 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 12:41:55 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:41:55 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 12:41:55 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:41:55 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 12:41:55 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 12:41:55 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 12:41:55 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 12:41:55 - sqlalchemy.engine.Engine - INFO - [generated in 0.00017s] {}
+2024-12-06 12:41:55 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 17:00:32 - sqlalchemy.engine.Engine - INFO - COMMIT
+2024-12-06 17:00:35 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2024-12-06 17:00:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 17:00:35 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2024-12-06 17:00:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 17:00:35 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2024-12-06 17:00:35 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2024-12-06 17:00:35 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2024-12-06 17:00:35 - sqlalchemy.engine.Engine - INFO - SELECT db_configs.id AS db_configs_id, db_configs.database_name AS db_configs_database_name 
+FROM db_configs ORDER BY db_configs.created_at DESC
+2024-12-06 17:00:35 - sqlalchemy.engine.Engine - INFO - [generated in 0.00021s] {}
+2024-12-06 17:00:35 - sqlalchemy.engine.Engine - INFO - ROLLBACK

@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MateGen赋范空间</title>
+    <style>
+      #loaderBg {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99999999;
+        /* background: linear-gradient(180deg, #012121 0%, #070f0f 100%); */
+        background: hsl(204, 80.2%, 15.9%);
+      }
+
+      .spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -1.30208rem;
+        margin-top: -1.5625rem;
+        height: 3.125rem;
+        text-align: center;
+        font-size: 0.52083rem;
+      }
+
+      .spinner > .double {
+        background: #e8edf7;
+        height: 100%;
+        width: 0.3125rem;
+        display: inline-block;
+        -webkit-animation: stretchDelay 1.2s infinite ease-in-out;
+        animation: stretchDelay 1.2s infinite ease-in-out;
+      }
+
+      .spinner .rect2 {
+        -webkit-animation-delay: -1.1s;
+        animation-delay: -1.1s;
+      }
+
+      .spinner .rect3 {
+        -webkit-animation-delay: -1s;
+        animation-delay: -1s;
+      }
+
+      .spinner .rect4 {
+        -webkit-animation-delay: -0.9s;
+        animation-delay: -0.9s;
+      }
+
+      .spinner .rect5 {
+        -webkit-animation-delay: -0.8s;
+        animation-delay: -0.8s;
+      }
+
+      @-webkit-keyframes stretchDelay {
+        0%,
+        40%,
+        100% {
+          -webkit-transform: scaleY(0.4);
+        }
+
+        20% {
+          -webkit-transform: scaleY(1);
+        }
+      }
+
+      @keyframes stretchDelay {
+        0%,
+        40%,
+        100% {
+          transform: scaleY(0.4);
+          -webkit-transform: scaleY(0.4);
+        }
+
+        20% {
+          transform: scaleY(1);
+          -webkit-transform: scaleY(1);
+        }
+      }
+    </style>
+    <script type="module" crossorigin="" src="/js/index-67479de6.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/js/svg-icons-d473d0e7.js">
+    <link rel="stylesheet" href="/css/index-f5f5ac92.css">
+  </head>
+  <body>
+    <div id="loaderBg">
+      <div class="spinner">
+        <div class="double rect1"></div>
+        <div class="double rect2"></div>
+        <div class="double rect3"></div>
+        <div class="double rect4"></div>
+        <div class="double rect5"></div>
+      </div>
+    </div>
+    <div id="app"></div>
+    
+  
+
+</body></html>

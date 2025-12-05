@@ -1,0 +1,23 @@
+services:
+  app:
+    build: .
+    image:  snowball1996/mategen:latest # Add this line to specify image name and tag
+    ports:
+      - "9000:9000"
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: snowball950123
+      MYSQL_DATABASE: mategen
+      MYSQL_CHARSET: utf8mb4
+      MYSQL_COLLATION: utf8mb4_unicode_ci
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql_data:
