@@ -93,12 +93,12 @@ def create_app():
     # Mount routes
     mount_app_routes(app)
 
-    # 重定向到 index.html
+    # Redirect to index.html
     @app.get("/", include_in_schema=False)
     def read_root():
         return RedirectResponse(url='/index.html')
 
-    # 挂载 前端 项目构建的前端静态文件夹 (对接前端静态文件的入口)
+    # Mount frontend project's built static files folder (entry point for frontend static files)
     if os.getenv("USE_DOCKER") == "True":
         app.mount("/", StaticFiles(directory="/app/static/dist"), name="static")
     else:
@@ -108,64 +108,64 @@ def create_app():
 
 def mount_app_routes(app: FastAPI):
     """
-    这里定义所有 RestFul API interfence
-    待做：
-    1. 获取用户全部的历史对话会话框
-    2. 获取某个会话框内的全部对话内容
+    Define all RestFul API interfaces here
+    TODO:
+    1. Get all historical conversation sessions for the user
+    2. Get all conversation content within a specific session
     3.
     """
 
     @app.get("/api/check_initialization", tags=["Initialization"],
-             summary="检查当前用户是否第一次启动项目，如果是，跳转到API_Key弹窗页面，调用/api/set_api_key")
+             summary="Check if current user is starting project for the first time, if so, redirect to API_Key popup page and call /api/set_api_key")
     def check_database_initialization():
         """
-        检查数据库是否已初始化并根据需要进行初始化。
+        Check if database is initialized and initialize if needed.
         """
         db_session = SessionLocal()
-        # 如果可以查询到API_KEY，则可以直接进入对话模型，不需要进行初始化
+        # If API_KEY can be queried, can directly enter conversation mode without initialization
         try:
             if check_and_initialize_db(db_session, "fufankongjian") == '':
                 return {"status": 400,
-                        "data": {"message": "当前用户初次启动项目，请跳转项目初始化页面，引导用户完成项目初始化工作"}}
+                        "data": {"message": "Current user is starting project for the first time, please redirect to project initialization page and guide user to complete initialization"}}
 
-            return {"status": 200, "data": {"message": "项目已完成过初始化配置，可直接进行对话"}}
+            return {"status": 200, "data": {"message": "Project has been initialized, can proceed to conversation directly"}}
         except Exception:
-            db_session.rollback()  # 出错时回滚
+            db_session.rollback()  # Rollback on error
             raise
         finally:
-            db_session.close()  # 确保会话关闭
+            db_session.close()  # Ensure session is closed
 
-    @app.post("/api/set_api_key", tags=["Initialization"], summary="授权有效的API Key，需要让用户手动填入")
-    def save_api_key(api_key: str = Body(..., description="用于问答的密钥", embed=True),
+    @app.post("/api/set_api_key", tags=["Initialization"], summary="Authorize valid API Key, requires manual user input")
+    def save_api_key(api_key: str = Body(..., description="Key for Q&A", embed=True),
                      ):
         db_session = SessionLocal()
         try:
-            # 判断是否是有效的 API Key
+            # Check if it's a valid API Key
             if not validate_api_key(api_key):
-                return {"status": 400, "data": {"message": "您输入的 API Key 无效。"}}
+                return {"status": 400, "data": {"message": "The API Key you entered is invalid."}}
 
-            # 存储用户加密后的 API_KEY
+            # Store user's encrypted API_KEY
             if upsert_agent_by_user_id(db_session, api_key, user_id='fufankongjian'):
-                return {"status": 200, "data": {"message": "您输入的 API Key 已生效。"}}
+                return {"status": 200, "data": {"message": "The API Key you entered is now active."}}
 
-            return {"status": 500, "data": {"message": "您输入的 API Key 无效。"}}
+            return {"status": 500, "data": {"message": "The API Key you entered is invalid."}}
 
         except Exception:
-            raise HTTPException(status_code=500, detail="服务器内部异常，请稍后重试。")
+            raise HTTPException(status_code=500, detail="Internal server error, please try again later.")
         finally:
-            db_session.close()  # 确保会话关闭
+            db_session.close()  # Ensure session is closed
 
-    # 初始化MetaGen实例，保存在全局变量中，用于后续的子方法调用
-    @app.post("/api/initialize", tags=["Initialization"],
-              summary="默认空参，是新建对话功能。\n"
-                      "在当前会话页面下： \n"
-                      "1. 如果选择了知识库，重新调用该方法，传递参数为：thread_id, knowledge_base_chat：true，knowledge_base_name_id：xxx \n"
-                      "2. 如果选择了数据库，重新调用该方法，传递参数是：thread_id, db_name_id：xxx \n"
-                      "3. 如果知识库和数据库都选择了，重新调用该方法，同时传递上述四个参数: "
-                      "thread_id, knowledge_base_chat：true, knowledge_base_name_id, db_name_id \n")
-    def initialize_mate_gen(thread_id: str = Body(None, description="会话id", embed=True),
-                            knowledge_base_name_id: str = Body(None, description="知识库id", embed=True, ),
-                            db_name_id: str = Body(None, description="数据库id", embed=True)):
+    # Initialize MetaGen instance, save in global variable for subsequent method calls
+    @app.post("/api/init_instance", tags=["Chat"],
+              summary="Default empty parameter for creating new conversation.\n"
+                      "In current session page: \n"
+                      "1. If knowledge base is selected, call this method again with parameters: thread_id, knowledge_base_chat: true, knowledge_base_name_id: xxx \n"
+                      "2. If database is selected, call this method again with parameters: thread_id, db_name_id: xxx \n"
+                      "3. If both knowledge base and database are selected, call this method with all four parameters: "
+                      "thread_id, knowledge_base_chat: true, knowledge_base_name_id: xxx, db_name_id: xxx")
+    def initialize_mate_gen(thread_id: str = Body(None, description="Session ID", embed=True),
+                            knowledge_base_name_id: str = Body(None, description="Knowledge base ID", embed=True, ),
+                            db_name_id: str = Body(None, description="Database ID", embed=True)):
         try:
             if thread_id and not knowledge_base_name_id and not db_name_id:
                 pass
@@ -176,40 +176,40 @@ def mount_app_routes(app: FastAPI):
                                                     db_name_id=db_name_id,
                                                     )
                     assis_id, thread_id = mategen_instance.initialize()
-                    return {"status": 200, "data": {"message": "已成功完成初始化。",
+                    return {"status": 200, "data": {"message": "Initialization completed successfully.",
                                                     "thread_id": thread_id}}
                 except Exception:
                     return {"status": 400,
-                            "data": {"message": "MateGen API Key 校验失败，请重新输入有效的 MateGen API Key."}}
+                            "data": {"message": "MateGen API Key validation failed, please re-enter a valid MateGen API Key."}}
         except Exception:
-            raise HTTPException(status_code=500, detail="服务器内部异常，请稍后重试。")
+            raise HTTPException(status_code=500, detail="Internal server error, please try again later.")
 
     @app.post("/api/chat", tags=["Chat"],
-              summary="用户输入框问答通用对话接口, 参数chat_stream默认为True 为流式输出, 采用SSE传输 \n"
-                      "1. 如果是Python编辑框点击发送，query参数为代码，code_type为Python，run_result为运行结果 \n"
-                      "2. 如果是SQL编辑框点击发送，query参数为Sql语句，code_type为SQL，run_result为运行结果")
-    async def chat(query: str = Body(..., description="用户会话框输入的问题", embed=True),
-                   thread_id: str = Body(None, description="会话id", embed=True),
-                   code_type: str = Body(None, description="类型：Python或SQL", embed=True),
-                   run_result: str = Body(None, description="Python或者SQL运行结果", embed=True),
-                   knowledge_base_name_id: str = Body(None, description="知识库的id", embed=True),
-                   db_name_id: str = Body(None, description="数据库的id", embed=True), ):
+              summary="User input Q&A universal conversation interface, parameter chat_stream defaults to True for streaming output using SSE transmission \n"
+                      "1. If Python editor sends, query parameter is code, code_type is Python, run_result is execution result \n"
+                      "2. If SQL editor sends, query parameter is SQL statement, code_type is SQL, run_result is execution result")
+    async def chat(query: str = Body(..., description="User's question from conversation box", embed=True),
+                   thread_id: str = Body(None, description="Session ID", embed=True),
+                   code_type: str = Body(None, description="Type: Python or SQL", embed=True),
+                   run_result: str = Body(None, description="Python or SQL execution result", embed=True),
+                   knowledge_base_name_id: str = Body(None, description="Knowledge base ID", embed=True),
+                   db_name_id: str = Body(None, description="Database ID", embed=True), ):
 
         cache_pool = MateGenClass.get_cache_pool()
         cache_instance = cache_pool.get_user_resources(user_id='fufankongjian')
         try:
             async def event_generator(cache_instance, thread_id, query, code_type, run_result):
                 db_session = SessionLocal()
-                # 用来保留完整的模型回答
+                # To preserve complete model response
                 full_text = ''
                 if code_type != "chat":
-                    # 创建格式化的消息字符串
+                    # Create formatted message string
                     message = (
-                        f"基于历史的聊天信息，这是我调试好的{code_type} 执行代码/语句，如下所示：\n"
+                        f"Based on historical chat information, here is my debugged {code_type} execution code/statement as follows:\n"
                         f"{query}\n"
-                        "运行结果如下所示：\n"
+                        "The execution result is as follows:\n"
                         f"{run_result}\n\n"
-                        "现在我将全部内容发送给你，你收到后请仅仅回复：您的代码/语句和运行结果已成功记录在当前会话中."
+                        "Now I'm sending all content to you, after receiving please only reply: Your code/statement and execution result have been successfully recorded in the current session."
                     )
 
                     await cache_instance["async_client"].beta.threads.messages.create(
@@ -236,14 +236,14 @@ def mount_app_routes(app: FastAPI):
                     knowledge_name = None
                     database_name = None
 
-                    # 检查是否存在 knowledge_base_name_id
+                    # Check if knowledge_base_name_id exists
                     if knowledge_base_name_id:
                         kb_info = db_session.query(KnowledgeBase).filter(
                             KnowledgeBase.id == knowledge_base_name_id).one_or_none()
                         if kb_info:
                             knowledge_name = kb_info.display_knowledge_base_name
 
-                    # 检查是否存在 db_name_id
+                    # Check if db_name_id exists
                     if db_name_id:
                         db_info = db_session.query(DbBase).filter(
                             DbBase.id == db_name_id).one_or_none()
@@ -300,20 +300,20 @@ def mount_app_routes(app: FastAPI):
                         yield "event: end\n\n"
                         await stream.until_done()
 
-                    # 插入消息到数据库
+                    # Insert message into database
                     kb_info = None
                     db_info = None
                     knowledge_name = None
                     database_name = None
 
-                    # 检查是否存在 knowledge_base_name_id
+                    # Check if knowledge_base_name_id exists
                     if knowledge_base_name_id:
                         kb_info = db_session.query(KnowledgeBase).filter(
                             KnowledgeBase.id == knowledge_base_name_id).one_or_none()
                         if kb_info:
                             knowledge_name = kb_info.display_knowledge_base_name
 
-                    # 检查是否存在 db_name_id
+                    # Check if db_name_id exists
                     if db_name_id:
                         db_info = db_session.query(DbBase).filter(
                             DbBase.id == db_name_id).one_or_none()
@@ -334,24 +334,24 @@ def mount_app_routes(app: FastAPI):
 
                     db_session.add(new_message)
 
-                    # 更新关联的线程更新时间
+                    # Update associated thread's updated_at timestamp
                     thread = db_session.query(ThreadModel).filter_by(id=thread_id).first()
                     if thread:
-                        thread.updated_at = func.now()  # 使用 SQLAlchemy 的 func.now() 确保数据库时间一致性
+                        thread.updated_at = func.now()  # Use SQLAlchemy's func.now() to ensure database time consistency
                         if thread.conversation_name == "new_chat":
                             thread.conversation_name = query[:20] if len(query) > 20 else query
 
-                    db_session.commit()  # 提交事务
+                    db_session.commit()  # Commit transaction
                     db_session.close()
 
-            # 使用SSE 流式处理
+            # Use SSE streaming
             event_response = EventSourceResponse(
                 event_generator(cache_instance, thread_id, query, code_type, run_result))
             event_response.headers.update({"Content-Type": "text/event-stream;data:text/plain"})
             return event_response
 
         except Exception as e:
-            raise HTTPException(status_code=500, detail="服务器内部异常，请稍后重试。")
+            raise HTTPException(status_code=500, detail="Internal server error. Please try again later.")
 
     @app.post("/api/upload", tags=["Knowledge"], summary="上传文件功能。\n"
                                                          "进行知识库解析操作前,先调用此函数，确保文件全部上传后，再进行/api/create_knowledge")

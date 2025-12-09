@@ -10,35 +10,35 @@ from sqlalchemy.exc import SQLAlchemyError
 
 from config.config import SQLALCHEMY_DATABASE_URI
 
-# 创建引擎
+# Create engine
 engine = create_engine(
     SQLALCHEMY_DATABASE_URI,
     echo=True,
-    pool_size=10,  # 设置连接池大小为10
-    max_overflow=20  # 最大溢出连接数为20
+    pool_size=10,  # Set connection pool size to 10
+    max_overflow=20  # Maximum overflow connections: 20
 )
 
-# 创建会话工厂
+# Create session factory
 SessionLocal = sessionmaker(autocommit=False,
                             autoflush=False,
                             bind=engine)
 
-# 创建 Base 类
+# Create Base class
 Base = declarative_base()
 
 
-# 获取数据库会话
+# Get database session
 def get_db():
     """
-    1. 函数被调用时，它会创建一个数据库会话 db = SessionLocal()。
-    2. 程序暂停执行，yield db 将会话对象 db 返回给调用者，调用者可以通过这个对象与数据库交互。
-    3. 数据库交互操作完成后，控制权回到 finally 语句块，调用 db.close() 关闭数据库会话，释放连接资源。
+    1. When the function is called, it creates a database session db = SessionLocal().
+    2. Program execution pauses, yield db returns the session object db to the caller, who can interact with the database through this object.
+    3. After database interaction is complete, control returns to the finally block, calling db.close() to close the database session and release connection resources.
     """
     db = SessionLocal()
     try:
         yield db
     except SQLAlchemyError as e:
         print(f"Database error: {e}")
-        db.rollback()  # 如果发生错误，回滚事务
+        db.rollback()  # If an error occurs, rollback the transaction
     finally:
         db.close()

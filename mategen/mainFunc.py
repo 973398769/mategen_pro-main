@@ -119,14 +119,14 @@ def print_code_if_exists(function_args):
     if function_args.get('sql_query'):
         code = function_args['sql_query']
         markdown_code = convert_to_markdown(code, 'sql')
-        print("即将执行以下代码：")
+        print("About to execute the following code:")
         display(Markdown(markdown_code))
 
     # If Python, print code in Markdown Python format
     elif function_args.get('py_code'):
         code = function_args['py_code']
         markdown_code = convert_to_markdown(code, 'python')
-        print("即将执行以下代码：")
+        print("About to execute the following code:")
         display(Markdown(markdown_code))
 
 

@@ -44,13 +44,13 @@ def write_google_env(google_search_key, cse_id):
     """
     Write google_search_key and cse_id to the .env file in the current project folder as environment variables.
     """
-    # 加载.env文件
+    # Load .env file
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     dotenv_path = os.path.join(BASE_DIR, '.env')
-    # 加载.env文件，如果不存在则创建一个
+    # Load .env file, create one if it doesn't exist
     if not os.path.exists(dotenv_path):
         with open(dotenv_path, 'w') as f:
-            pass  # 创建一个空的 .env 文件
+            pass  # Create an empty .env file
         
     load_dotenv(dotenv_path)
     
@@ -108,13 +108,13 @@ def write_zhihu_env(cookie, user_agent):
     """
     Write ZHIHU_SEARCH_COOKIE and ZHIHU_SEARCH_USER_AGENT to the .env file in the current project folder as environment variables.
     """
-    # 加载.env文件
+    # Load .env file
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     dotenv_path = os.path.join(BASE_DIR, '.env')
-    # 加载.env文件，如果不存在则创建一个
+    # Load .env file, create one if it doesn't exist
     if not os.path.exists(dotenv_path):
         with open(dotenv_path, 'w') as f:
-            pass  # 创建一个空的 .env 文件
+            pass  # Create an empty .env file
         
     load_dotenv(dotenv_path)
     
@@ -220,10 +220,10 @@ def write_oss_env(access_key_id, access_key_secret, endpoint, bucket_name):
     # Load .env file
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     dotenv_path = os.path.join(BASE_DIR, '.env')
-    # 加载.env文件，如果不存在则创建一个
+    # Load .env file, create one if it doesn't exist
     if not os.path.exists(dotenv_path):
         with open(dotenv_path, 'w') as f:
-            pass  # 创建一个空的 .env 文件
+            pass  # Create an empty .env file
 
     load_dotenv(dotenv_path)
     
@@ -245,7 +245,7 @@ def test_kaggle_api():
 
     :return: Test result (True indicates success, False indicates failure)
     """
-    # 加载环境变量
+    # Load environment variables
     dotenv_path = find_dotenv()
     load_dotenv(dotenv_path)
     
@@ -293,7 +293,7 @@ def write_kaggle_env(headers, cookies):
     # Load .env file
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     dotenv_path = os.path.join(BASE_DIR, '.env')
-    # 加载.env文件，如果不存在则创建一个
+    # Load .env file, create one if it doesn't exist
     if not os.path.exists(dotenv_path):
         with open(dotenv_path, 'w') as f:
             pass  
