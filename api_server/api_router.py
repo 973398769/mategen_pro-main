@@ -264,14 +264,14 @@ def mount_app_routes(app: FastAPI):
 
                     db_session.add(new_message)
 
-                    # 更新关联的线程更新时间
+                    # Update associated thread's updated_at timestamp
                     thread = db_session.query(ThreadModel).filter_by(id=thread_id).first()
                     if thread:
-                        thread.updated_at = func.now()  # 使用 SQLAlchemy 的 func.now() 确保数据库时间一致性
+                        thread.updated_at = func.now()  # Use SQLAlchemy's func.now() to ensure database time consistency
                         if thread.conversation_name == "new_chat":
                             thread.conversation_name = query[:20] if len(query) > 20 else query
 
-                    db_session.commit()  # 提交事务
+                    db_session.commit()  # Commit transaction
                     db_session.close()
 
                 else:
@@ -353,12 +353,12 @@ def mount_app_routes(app: FastAPI):
         except Exception as e:
             raise HTTPException(status_code=500, detail="Internal server error. Please try again later.")
 
-    @app.post("/api/upload", tags=["Knowledge"], summary="上传文件功能。\n"
-                                                         "进行知识库解析操作前,先调用此函数，确保文件全部上传后，再进行/api/create_knowledge")
+    @app.post("/api/upload", tags=["Knowledge"], summary="File upload functionality.\n"
+                                                         "Call this function before knowledge base parsing operation to ensure all files are uploaded before proceeding to /api/create_knowledge")
     async def upload_files(
-            folderName: str = Form(...),  # 接收文件夹名称
-            files: List[UploadFile] = File(...),  # 接收多个文件
-            kb_id: str = Form(None, description="如果是知识库编辑页面传递此参数")
+            folderName: str = Form(...),  # Receive folder name
+            files: List[UploadFile] = File(...),  # Receive multiple files
+            kb_id: str = Form(None, description="Pass this parameter if from knowledge base edit page")
     ):
 
         from db.base_model import FileInfo, KnowledgeBase
@@ -385,12 +385,12 @@ def mount_app_routes(app: FastAPI):
                     KnowledgeBase.knowledge_base_name == folderName,
                 ).one_or_none()
 
-                # 如果本地目录存在，且已经被解析过，则不允许上传
+                # If local directory exists and has been parsed, don't allow upload
                 if existing_kb and existing_kb.vector_store_id != None:
-                    return {"status": 400, "data": {"message": "该知识库已存在，请更换知识库名称"}}
+                    return {"status": 400, "data": {"message": "This knowledge base already exists, please change the knowledge base name"}}
 
                 if not existing_kb:
-                    # 如果没有，说明 没上传过文件，也没解析过，需要新建初始记录，并记录知识库id
+                    # If not exists, means files haven't been uploaded or parsed, need to create initial record and record knowledge base id
                     new_kb = KnowledgeBase(
                         knowledge_base_name=folderName,
                         display_knowledge_base_name=folderName,

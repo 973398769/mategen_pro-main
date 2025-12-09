@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="README_zh.md"><strong>中文</strong></a> | 
-  <a href="docs/MateGen使用教程.ipynb"><strong>Tutorial</strong></a> | 
+  <a href="docs/MateGen_Tutorial.ipynb"><strong>Tutorial</strong></a> | 
   <a href="docs/wechat.png"><strong>WeChat</strong></a>
 </p>
 
@@ -93,7 +93,7 @@ During the testing phase, a limited quantity of **300 million free tokens is ava
 
 ## 🎬 Demo Showcase
 
-Note: Demonstration operations can be implemented by referring to the relevant code in the [MateGen Tutorial](docs/MateGen使用教程.ipynb).
+Note: Demonstration operations can be implemented by referring to the relevant code in the [MateGen Tutorial](docs/MateGen_Tutorial.ipynb).
 
 ### Zero-Barrier Convenient Calling
 
@@ -236,7 +236,7 @@ mategen.chat("Hello, nice to meet you!")
 Hello! Nice to meet you! How can I help you?
 ```
 
-For more MateGen usage methods, see the [MateGen Tutorial](docs/MateGen使用教程.ipynb).
+For more MateGen usage methods, see the [MateGen Tutorial](docs/MateGen_Tutorial.ipynb).
 
 ### API Key Request
 
