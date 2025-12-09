@@ -5,25 +5,25 @@ import json
 class EventHandler(AssistantEventHandler):
     @override
     def on_text_created(self, text) -> None:
-        """响应回复创建事件"""
+        """Respond to reply creation event"""
         pass
         #print(f"\nassistant > ", end="", flush=True)
 
     @override
     def on_text_delta(self, delta, snapshot):
-        """响应输出生成的流片段"""
+        """Respond to output generation stream fragments"""
         pass
         # print(delta.value, end="", flush=True)
 
     @override
     def on_tool_call_created(self, tool_call):
-        """响应工具调用"""
+        """Respond to tool call"""
         pass
         # print(f"\nassistant > {tool_call.type}\n", flush=True)
 
     @override
     def on_tool_call_delta(self, delta, snapshot):
-        """响应工具调用的流片段"""
+        """Respond to tool call stream fragments"""
         pass
 
         # if delta.type == 'code_interpreter':
@@ -38,11 +38,11 @@ class EventHandler(AssistantEventHandler):
     @override
     def on_event(self, event):
         """
-        响应 'requires_action' 事件
+        Respond to 'requires_action' event
         """
         if event.event == 'thread.run.requires_action':
 
-            run_id = event.data.id  # 获取 run ID
+            run_id = event.data.id  # Get run ID
             self.handle_requires_action(event.data, run_id)
 
     def handle_requires_action(self, data, run_id):
@@ -54,7 +54,7 @@ class EventHandler(AssistantEventHandler):
             #     f"{tool.function.name}({arguments})",
             #     flush=True
             # )
-            # 运行 function
+            # Run function
             tool_outputs.append({
                 "tool_call_id": tool.id,
                 "output": available_functions[tool.function.name](
@@ -62,11 +62,11 @@ class EventHandler(AssistantEventHandler):
                 )}
             )
 
-        # 提交 function 的结果，并继续运行 run
+        # Submit function results and continue running
         self.submit_tool_outputs(tool_outputs, run_id)
 
     def submit_tool_outputs(self, tool_outputs, run_id):
-        """提交function结果，并继续流"""
+        """Submit function results and continue stream"""
         full_text = ''
         with client.beta.threads.runs.submit_tool_outputs_stream(
                 thread_id=self.current_run.thread_id,
@@ -82,7 +82,7 @@ class EventHandler(AssistantEventHandler):
 
 from openai import OpenAI
 
-# 初始化 OpenAI 服务
+# Initialize OpenAI service
 
 
 client = OpenAI()
