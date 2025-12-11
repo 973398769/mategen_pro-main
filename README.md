@@ -363,4 +363,6 @@ Special thanks to all contributors and the Jiutian AI Research Team for their co
 
 <div align="center">
 Made with ❤️ by Jiutian AI Research Team
+<br><br>
+<sub>Last Updated: December 2025</sub>
 </div>
