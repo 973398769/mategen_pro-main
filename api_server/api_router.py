@@ -400,7 +400,7 @@ def mount_app_routes(app: FastAPI):
 
                     knowledge_base_info_id = new_kb.id
 
-            # 生成指定文件夹路径
+            # Generate target folder path
             if kb_id:
                 folder_path = os.path.join(UPLOAD_FOLDER, local_kb_info.knowledge_base_name)
                 os.makedirs(folder_path, exist_ok=True)
@@ -414,24 +414,24 @@ def mount_app_routes(app: FastAPI):
                     unsupported_files.append(file.filename)
                     continue
 
-                # 文件存储路径
+                # File storage path
                 file_location = os.path.join(folder_path, file.filename)
 
-                # 保存或覆盖文件
+                # Save or overwrite file
                 with open(file_location, "wb") as buffer:
                     shutil.copyfileobj(file.file, buffer)
 
-                # 检查数据库中是否已有记录
+                # Check if record exists in database
                 existing_file = db_session.query(FileInfo).filter_by(folder_path=file_location).first()
 
                 if existing_file:
 
-                    # 先删除掉文件
+                    # Delete existing file first
                     client.files.delete(existing_file.id)
-                    # 上传新的文件
+                    # Upload new file
                     file_id = client.files.create(file=open(file_location, "rb"), purpose="assistants")
 
-                    existing_file.upload_time = func.now()  # 更新上传时间
+                    existing_file.upload_time = func.now()  # Update upload time
                     existing_file.id = file_id.id
                     db_session.commit()
 
@@ -443,19 +443,19 @@ def mount_app_routes(app: FastAPI):
                     })
 
                 else:
-                    # 如果没有的话，说明该文件是第一次上传
+                    # If not exists, this is the first upload
                     file_id = client.files.create(file=open(file_location, "rb"), purpose="assistants")
 
                     knowledge_base_info = (db_session.query(KnowledgeBase)
                     .filter(
                         KnowledgeBase.display_knowledge_base_name == folderName)).one_or_none()
-                    # 创建新文件记录
+                    # Create new file record
                     new_file = FileInfo(
-                        id=file_id.id,  # 为新文件生成唯一标识符
+                        id=file_id.id,  # Unique identifier for new file
                         filename=file.filename,
                         file_extension=file_extension,  # Store file extension
                         folder_path=file_location,
-                        knowledge_base_id=knowledge_base_info.id  # 关联到新创建的知识库
+                        knowledge_base_id=knowledge_base_info.id  # Link to created knowledge base
                     )
 
                     db_session.add(new_file)
@@ -468,10 +468,10 @@ def mount_app_routes(app: FastAPI):
                     })
 
             if unsupported_files:
-                return {"status": 200, "data": {"message": "支持的文件类型已上传成功",
+                return {"status": 200, "data": {"message": "Supported file types uploaded successfully",
                                                 "faild_files": unsupported_files}}
             else:
-                return {"status": 200, "data": {"message": "所有文件上传服务器成功",
+                return {"status": 200, "data": {"message": "All files uploaded to server successfully",
                                                 "kb_id": knowledge_base_info_id,
                                                 "folder": folderName,
                                                 "files": uploaded_files}}
@@ -480,9 +480,9 @@ def mount_app_routes(app: FastAPI):
             raise HTTPException(status_code=500, detail=e)
 
     @app.post("/api/create_knowledge", tags=["Knowledge"],
-              summary="知识库解析")
+              summary="Knowledge Base Parsing")
     def create_knowledge(request: KnowledgeBaseCreateRequest,
-                         thread_id: str = Query(..., description="传递当前会话状态下的thread_id"),
+                         thread_id: str = Query(..., description="Pass the thread_id of the current session"),
                          ):
 
         from server.utils import SessionLocal
@@ -495,12 +495,12 @@ def mount_app_routes(app: FastAPI):
                     .filter(KnowledgeBase.id != request.kb_id)
                     .first())
         if kb_check:
-            return {"status": 400, "data": {"message": "系统已存在该知识库名称的存储文件，请更换其他数据库名称"}}
+            return {"status": 400, "data": {"message": "A storage file with this knowledge base name already exists; please choose another knowledge base name."}}
         mategen_instance = MateGenClass()
         assis_id, thread_id = mategen_instance.initialize()
 
         client = mategen_instance.cache_pool.get_client(user_id="fufankongjian")
-        # 这里要根据chunking_strategy策略设定RAG的切分策略，默认是自动
+        # Set RAG chunking strategy based on chunking_strategy; default is auto
         vector_id = create_knowledge_base(client=client,
                                           kb_id=request.kb_id,
                                           knowledge_base_name=request.knowledge_base_name,
@@ -509,13 +509,12 @@ def mount_app_routes(app: FastAPI):
                                           chunk_overlap_tokens=request.chunk_overlap_tokens,
                                           thread_id=thread_id)
         if vector_id is not None:
-            return {"status": 200, "data": {"message": "已成功完成知识库创建",
+            return {"status": 200, "data": {"message": "Knowledge base created successfully",
                                             "vector_id": vector_id}}
         else:
-            raise HTTPException(status_code=400, detail="知识库无法创建，请确认知识库文件夹中均为格式合规的文件，"
-                                                        "目前仅支持 .md, .pdf, .doc, .docx, .ppt, .pptx 文件类型")
+            raise HTTPException(status_code=400, detail="Unable to create knowledge base; ensure the folder contains only compliant files. Currently supports .md, .pdf, .doc, .docx, .ppt, .pptx file types")
 
-    @app.delete("/api/files/{file_id}", tags=["Knowledge"], summary="根据文件id 删除某个文件")
+    @app.delete("/api/files/{file_id}", tags=["Knowledge"], summary="Delete a file by ID")
     async def delete_file(file_id: str):
 
         from server.utils import SessionLocal
@@ -523,17 +522,17 @@ def mount_app_routes(app: FastAPI):
         db_session = SessionLocal()
         mategen_instance = MateGenClass()
         client = mategen_instance.cache_pool.get_client(user_id="fufankongjian")
-        # 查询数据库找到文件
+        # Query database to find file
         file_to_delete = db_session.query(FileInfo).filter(FileInfo.id == file_id).first()
         if file_to_delete:
             try:
-                # 删除文件系统中的文件
+                # Delete file from filesystem
                 os.remove(file_to_delete.folder_path)
-                # 从数据库中删除文件记录
+                # Delete file record from database
                 db_session.delete(file_to_delete)
                 db_session.commit()
                 client.files.delete(file_id)
-                return {"status": 200, "message": f"{file_to_delete.filename}文件已删除"}
+                return {"status": 200, "message": f"{file_to_delete.filename} has been deleted"}
             except Exception as e:
                 db_session.rollback()
                 raise HTTPException(status_code=500, detail="e")

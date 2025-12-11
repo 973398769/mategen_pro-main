@@ -3,7 +3,7 @@
 ![MateGen Banner](https://ml2022.oss-cn-hangzhou.aliyuncs.com/img/136439902d507ef41f9f746bddd47fc.jpg)
 
 <p align="center">
-  <a href="README_zh.md"><strong>中文</strong></a> | 
+  <a href="README_zh.md"><strong>Chinese</strong></a> | 
   <a href="docs/MateGen_Tutorial.ipynb"><strong>Tutorial</strong></a> | 
   <a href="docs/wechat.png"><strong>WeChat</strong></a>
 </p>
