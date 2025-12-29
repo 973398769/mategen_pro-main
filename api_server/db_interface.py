@@ -55,7 +55,7 @@ def test_database_connection(db_config: DBConfig):
         return table_list  # Directly return table list
     except SQLAlchemyError as e:
         session.close()
-        raise HTTPException(status_code=400, detail=f"Database connection failed: {str(e)}") failed: {str(e)}")
+        raise HTTPException(status_code=400, detail=f"Database connection failed: {str(e)}")
     except Exception as e:
         session.close()
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
@@ -113,7 +113,7 @@ def insert_db_config(db_config: DBConfig):
     except Exception as e:
         session.rollback()
         session.close()
-    raise HTTPException(status_code=500, detail=f"Data insertion failed: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Data insertion failed: {str(e)}")
 
 
 def update_db_config(db_info_id: str, new_config: DBConfig):

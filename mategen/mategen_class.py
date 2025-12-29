@@ -114,49 +114,45 @@ class MateGenClass:
         client = self.cache_pool.get_client(user_id)
 
         if client:
-            # If exists, use it directly
             self.client = client
-            logging.info(f"Reusing client: {self.client}")")
+            logging.info(f"Reusing client: {self.client}")
         else:
-            # If doesn't exist, create new client and store in cache pool
-            if base_url == '':
-                self.client = OpenAI(api_key=agent_info.api_key)
+            if base_url:
+                self.client = OpenAI(api_key=agent_info.api_key, base_url=base_url)
             else:
-                self.client = OpenAI(api_key=agent_info.api_key,
-                                         base_url=base_url)
+                self.client = OpenAI(api_key=agent_info.api_key)
             logging.info(f"Creating new client: {self.client}")
             self.cache_pool.set_client(user_id, self.client)
-            logging.info(f"Completed client caching: {self.client}")
+            logging.info("Client cached for future reuse")
 
         async_client = self.cache_pool.get_async_client(user_id)
         if async_client:
-            logging.info(f"Reusing async_client: {async_client}")
+            logging.info(f"Reusing async client: {async_client}")
         else:
-            if base_url == '':
-                async_client = AsyncOpenAI(api_key=agent_info.api_key)
+            if base_url:
+                async_client = AsyncOpenAI(api_key=agent_info.api_key, base_url=base_url)
             else:
-                async_client = AsyncOpenAI(api_key=agent_info.api_key,
-                                           base_url=base_url)
-            logging.info(f"Creating new async_client: {async_client}")
+                async_client = AsyncOpenAI(api_key=agent_info.api_key)
+            logging.info(f"Creating new async client: {async_client}")
             self.cache_pool.set_async_client(user_id, async_client)
-            logging.info(f"Completed async_client caching: {async_client}")
+            logging.info("Async client cached for future reuse")
 
-        logging.info("Initializing MateGen object instance, please wait...")ct instance, please wait...")
+        logging.info("Initializing MateGen object instance, please wait...")
 
         # Check OpenAI instance connectivity:
         try:
             # Step 1. Instantiate Assistant object
             if self.client.models.list(timeout=5):
-                logging.info("API_KEY verified, successfully connected to server...")ully connected to server...")
+                logging.info("API key verified, successfully connected to server.")
                 # First check thread pool for assistant object
                 assistant = self.cache_pool.get_assistant(user_id)
                 if assistant:
                     self.assis_id = assistant
-                    logging.info(f"Reusing assistant instance: {self.assis_id}")lf.assis_id}")
+                    logging.info(f"Reusing assistant instance: {self.assis_id}")
                 else:
                     if not agent_info.initialized:
                         logging.info("First time using MateGen, initializing Agent settings...")
-                        # Generate assistant idant id
+                        # Generate assistant identifier
                         self.assis_id = generate_assistant(self.client, enhanced_mode)
 
                         # Update database info
@@ -196,7 +192,7 @@ class MateGenClass:
                     self.thread_id = thread_id
                     logging.info(f"Reusing thread instance: {self.thread_id}")
 
-                # If knowledge base or database is selectedbase or database is selected
+                # If knowledge base or database is selected
                 if self.knowledge_base_name_id or self.db_name_id:
                     tools = []
                     instructions = assistant_instructions  # Initialize base instructions

@@ -28,7 +28,7 @@
 
 ## What is MateGen?
 
-**MateGen is an Interactive Intelligent Programming Assistant developed by the Jiutian AI Research Team.** It can be conveniently called within Jupyter code environments to assist users in efficiently completing intelligent data analysis, machine learning, deep learning, and large model development tasks. It can also be customized with knowledge bases and extended functionality based on actual user needs.
+**MateGen is an Interactive Intelligent Programming Assistant.** It can be conveniently called within Jupyter code environments to assist users in efficiently completing intelligent data analysis, machine learning, deep learning, and large model development tasks. It can also be customized with knowledge bases and extended functionality based on actual user needs.
 
 ## 🚀 Key Features
 
@@ -319,7 +319,7 @@ MateGen adopts the most advanced threads-runs architecture for better user histo
 
 ### MateGen as Intelligent Teaching Assistant
 
-MateGen can also be applied to various specific business scenarios. For example, MateGen is currently used in the teaching assistance of various courses by Jiutian's teaching team as an intelligent teaching assistant. The basic functional execution flow of MateGen as an intelligent teaching assistant is as follows:
+MateGen can also be applied to various specific business scenarios. For example, MateGen is currently used in the teaching assistance of various courses as an intelligent teaching assistant. The basic functional execution flow of MateGen as an intelligent teaching assistant is as follows:
 
 <div align="center">
 <img src="https://ml2022.oss-cn-hangzhou.aliyuncs.com/img/image-20240715001720425.png" alt="Teaching Assistant Flow" width="700"/>
@@ -357,12 +357,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-Special thanks to all contributors and the Jiutian AI Research Team for their continuous support and development of MateGen.
+Special thanks to all contributors for their continuous support and development of MateGen.
 
 ---
 
 <div align="center">
-Made with ❤️ by Jiutian AI Research Team
+Made with ❤️ by 973398769
 <br><br>
 <sub>Last Updated: December 2025</sub>
 </div>

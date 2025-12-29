@@ -1738,3 +1738,23 @@ FROM db_configs ORDER BY db_configs.created_at DESC
 FROM db_configs ORDER BY db_configs.created_at DESC
 2024-12-06 17:00:35 - sqlalchemy.engine.Engine - INFO - [generated in 0.00021s] {}
 2024-12-06 17:00:35 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`agents`
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`threads`
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`knowledge_bases`
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`file_info`
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`db_configs`
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mategen`.`messages`
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-12-16 17:30:00 - sqlalchemy.engine.Engine - INFO - COMMIT

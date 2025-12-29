@@ -5,22 +5,22 @@ import json
 class EventHandler(AssistantEventHandler):
     @override
     def on_text_created(self, text) -> None:
-        """响应回复创建事件"""
+        """Respond to reply creation event"""
         print(f"\nassistant > ", end="", flush=True)
 
     @override
     def on_text_delta(self, delta, snapshot):
-        """响应输出生成的流片段"""
+        """Respond to output generation stream fragments"""
         print(delta.value, end="", flush=True)
 
     @override
     def on_tool_call_created(self, tool_call):
-        """响应工具调用"""
+        """Respond to tool call"""
         print(f"\nassistant > {tool_call.type}\n", flush=True)
 
     @override
     def on_tool_call_delta(self, delta, snapshot):
-        """响应工具调用的流片段"""
+        """Respond to tool call stream fragments"""
         if delta.type == 'code_interpreter':
             if delta.code_interpreter.input:
                 print(delta.code_interpreter.input, end="", flush=True)
@@ -33,7 +33,7 @@ class EventHandler(AssistantEventHandler):
     @override
     def on_event(self, event):
         """
-        响应 'requires_action' 事件
+        Respond to 'requires_action' event
         """
         if event.event == 'thread.run.requires_action':
 
@@ -61,7 +61,7 @@ class EventHandler(AssistantEventHandler):
         self.submit_tool_outputs(tool_outputs, run_id)
 
     def submit_tool_outputs(self, tool_outputs, run_id):
-        """提交function结果，并继续流"""
+        """Submit function results and continue stream"""
         with client.beta.threads.runs.submit_tool_outputs_stream(
                 thread_id=self.current_run.thread_id,
                 run_id=self.current_run.id,
@@ -78,20 +78,17 @@ from openai import OpenAI
 client = OpenAI()
 
 
-instructions = ("你是MateGen，一个交互式智能编程助手，由九天老师大模型技术团队开发，旨在为数据技术人提供高效稳定的智能辅助编程服务。你具备如下能力："
-                "1. 拥有无限对话上下文记忆能力，除非用户主动删除聊天记录，否则你可以永久的记住用户对话信息，这项能力能够让你在和用户交互的过程中逐渐深入理解用户需求，你可以“越用越懂用户”；)"
-                "2.强大的本地知识库问答能力，你具备强大的RAG功能，可以在海量文本中进行高精度检索，支持用户围绕自己的本地文本进行进行知识库问答；"
-                "3.本地代码解释器功能，你可以连接用户本地的Python环境，并可以随时根据用户的需求，编写高准确率的Python代码，并在用户本地环境运行代码，从而辅助用户完成编程任务。你可以调用python_inter完成Python编程任务，或调用fig_inter函数完成Python绘图任务；"
-                "4.NL2SQL功能，你可以连接用户本地的MySQL环境，并根据用户需求编写SQL代码，并在用户MySQL数据库中执行，从而协助用户高效率完成查数、提数等相关工作。你可以调用sql_inter完成查数任务，并使用extract_data函数将MySQL的数据读取到当前Python环境中；"
-                "5.你还具备多模态能力，当用户输入图片url地址时，你可以围绕用户输入的图片进行信息识别，并且允许一次性输入多张图片。你可以调用image_recognition函数来完成图像识别工作；"
-                "6.你还具备联网功能，当用户的提问超出你的知识库范畴的时候，你可以调用联网功能，先在互联网上搜集相关信息，再进行回答。你看可以调用get_answer函数在知乎上搜索相关信息，也可以调用get_answer_github函数在Github上获取相关信息；"
-                "7.除此之外，你可以辅导用户进行Kaggle竞赛，你可以借助Kaggle API搜索竞赛相关信息，并且自动下载热门Kernel并构建知识库，据此辅导用户参与Kaggel竞赛；"
-                "8.你还可以辅导用户进行论文解读、数据分析报告编写等，更多功能，欢迎用户在使用过程中探索。总之，你是目前市面上性能强悍、功能稳定的智能编程助手。"
-                "目前项目所处阶段："
-                "本Agent项目正在内测阶段，只开放了在线服务版本，尚未开放本地部署版本。用户需要联系客服小可爱微信：littlelion_1215，回复“MG”来领取或购买在线服务的API - KEY。"
-                "内测阶段结束后，会尽快上线本地部署的开源版本。"
-                "请在回复中保持友好、支持和耐心。"
-                "这是你能够连接到的MySQL信息：host: 192.168.110.131, port: 3306, user: root, passwd: snowball950123, db: mategen,")
+instructions = ("You are MateGen, an interactive coding assistant designed to provide reliable, high-quality support for data practitioners. "
+                "Capabilities: "
+                "1. Persistent conversation memory (until the user clears history), enabling deeper understanding over time. "
+                "2. RAG-based local knowledge-base Q&A over large text corpora. "
+                "3. Local Python code interpreter: connect to the user's environment, write accurate code, and run locally. Use python_inter or fig_inter for Python and plotting. "
+                "4. NL2SQL: connect to local MySQL, write/execute SQL. Use sql_inter and extract_data to load data into Python. "
+                "5. Multimodal image understanding via image_recognition. "
+                "6. Web search for out-of-knowledge questions (get_answer, get_answer_github). "
+                "7. Kaggle assistance using the Kaggle API. "
+                "8. Paper reading and data-report drafting. Be friendly, supportive, and patient. "
+                "MySQL connection info: host: 192.168.110.131, port: 3306, user: root, passwd: snowball950123, db: mategen,")
 
 
 assistant = client.beta.assistants.create(
@@ -164,28 +161,26 @@ assistant = client.beta.assistants.create(
 
 def python_inter(py_code, g=None):
     """
-    专门用于执行python代码，并获取最终查询或处理结果。
-    :param py_code: 字符串形式的Python代码，
-    :param g: g，字典形式变量，表示环境变量，若未提供则创建一个新的字典
-    :return：代码运行的最终结果
+    Execute Python code and return the final result.
+    :param py_code: Python code as a string
+    :param g: Dict representing the environment; a new dict is created if not provided
+    :return: Result of the code execution
     """
     if g is None:
         g = {}  # 使用空字典作为默认全局环境
 
-    try:
-        # 尝试如果是表达式，则返回表达式运行结果
-        return str(eval(py_code, g))
-    except Exception as e:
-        # 记录执行前的全局变量
-        global_vars_before = set(g.keys())
-        try:
-            exec(py_code, g)
-        except Exception as e:
-            return f"代码执行时报错: {e}"
-        # 记录执行后的全局变量，确定新变量
-        global_vars_after = set(g.keys())
-        new_vars = global_vars_after - global_vars_before
-        # 若存在新变量
+    """
+    Execute a SQL query against MySQL and return the results.
+    Uses pymysql via SQLAlchemy to connect and run queries.
+    :param sql_query: SQL query string to run against the MySQL database
+    :param host: MySQL server hostname
+    :param user: MySQL server username
+    :param password: MySQL server password
+    :param database: MySQL database name
+    :param port: MySQL server port
+    :param g: Environment variable (unused); keep default
+    :return: Query results as JSON
+    """
         if new_vars:
             result = {var: g[var] for var in new_vars}
             return str(result)
@@ -247,7 +242,7 @@ thread = client.beta.threads.create()
 message = client.beta.threads.messages.create(
     thread_id=thread.id,
     role="user",
-    content="帮我查询 我数据库中 都有哪些 表",
+    content="List all tables in my database",
 )
 # 使用 stream 接口并传入 EventHandler
 with client.beta.threads.runs.stream(
